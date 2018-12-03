@@ -11,7 +11,7 @@
     return $user !== false && password_verify($password, $user['password']);
   }
 
-  function createUser($username, $password) {
+  function createUser($username, $password, $birthday, $city) {
     global $conn;
 
     $options = [
@@ -20,8 +20,8 @@
 
     $hash = password_hash ($password , PASSWORD_DEFAULT, $options);
 
-    $stmt = $conn->prepare('INSERT INTO users VALUES (?, ?)');
-    $stmt->execute(array($username, $hash));
+    $stmt = $conn->prepare('INSERT INTO users VALUES (?, ?, ?, ?)');
+    $stmt->execute(array($username, $hash, $birthday, $city));
   }
 
 ?>

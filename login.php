@@ -14,7 +14,8 @@ if (isset($save)) {
     } else {
         $_SESSION['error_message'] = 'Login failed!';
     }
-header("Refresh:0");
+header("Location: index.php");
+
 }
 ?>
 
@@ -33,17 +34,7 @@ header("Refresh:0");
 
         </label>
     </form>
-    <?php if (isset($_ERROR_MESSAGE)) { ?>
-        <div id="errors">
-            <?= $_ERROR_MESSAGE ?>  
-        </div>
-    <?php } ?>
-
-    <?php if (isset($_SUCCESS_MESSAGE)) { ?>
-        <div id="success">
-            <?= $_SUCCESS_MESSAGE ?>  
-        </div>
-    <?php } ?>
+    
 
 </section>
 
