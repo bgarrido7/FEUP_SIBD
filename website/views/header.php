@@ -12,17 +12,17 @@
                     <li><a href="index.php"><strong>STradeL</strong></a></li>
 
 
-                    <li><a href="index.php?option=about"> About</a></li>
+                    <li><a href="search.php"> Search</a></li>
 
                 </ul>
 
 
                 <ul class="navbar navbar-top navbar-right">
                     <?php if (isset($_SESSION['username'])) { ?>
-                        <li><a href="index.php?option=logout"> Logout</a></li>
-                        <li><a href="index.php?option=profile"> Profile</a></li>
+                        <li><a href="logout.php"> Logout</a></li>
+                        <li><a href="profile.php"> Profile</a></li>
                     <?php } else { ?>
-                        <li><a href="index.php?option=New_user"> Sign Up</a></li>
+                        <li><a href="register.php"> Sign Up</a></li>
                         <li><a href="login.php"> Login</a></li>                        
                     <?php } ?>
                 </ul>
