@@ -11,10 +11,12 @@ if (isset($save)) {
         $_SESSION['success_message'] = 'Login successful!';
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username;
+        header("Location: index.php");
     } else {
         $_SESSION['error_message'] = 'Login failed!';
-    }
-header("Location: index.php");
+        header("Refresh:0");
+   }
+    
 
 }
 ?>

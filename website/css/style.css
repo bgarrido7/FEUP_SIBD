@@ -1,21 +1,27 @@
 .navbar{
     background-color: #333;
-    
 }
-.navbar-top.navbar-left {
-    
+
+.navbar-top{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     display:block;
-    float:left;
     top:0;
-    width: 82%;
+    width: auto;
+
+}
+.navbar-top.navbar-left {
+    float:left;
 }
 
-a{
-    
+.navbar-top.navbar-right {
+    float:right;
+}
+
+.navbar a{
+
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -28,32 +34,39 @@ li{
     float:left;
 }
 
-.navbar-top.navbar-right {
-  
+
+.navbar.navbar-bottom{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display:block;
-    float:right;
-    top:0;
-    width: 18%;
-}
-
-ul.navbar-left a:hover {
-    background-color: #111;
-}
-
-ul.navbar-right a:hover {
-    background-color: #111;
-}
-
-.navbar-bottom{
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 1rem;
-    text-align: center;
+    padding: 0;
+    height: 30;
+
 }
 
+.messages{
+    display:block;
+    color: white;
+
+
+}
+
+.errors{
+    background-color: red;
+}
+
+.success{
+    background-color: green;
+
+}
+
+.meio{
+    position: relative;
+    display: block;
+}
+
+.profile_sidebar{
+     list-style-type: none;
+}

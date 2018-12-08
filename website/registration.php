@@ -7,9 +7,9 @@ if (isset($save)) {
     $username = strip_tags($_POST['username']);
     $password = $_POST['password'];
     $city = $_POST['city'];
-    $birthday = $_POST('birthday');
+    $birthday = $_POST['birthday'];
     
-    if (!$username || !$password || $city) {
+    if (!$username || !$password || !$city || !$birthday) {
         $_SESSION['error_message'] = 'All fields are mandatory!';
         $_SESSION['form_values'] = $_POST;
     } else {
@@ -31,10 +31,10 @@ if (isset($save)) {
             $_SESSION['form_values'] = $_POST;
         }
     }
-    
+    header("Location: index.php");
 }
 ?>
-<section id="content">
+<section class="form">
     <h2>Register</h2>
     <form method="post">
         <label> Username:
