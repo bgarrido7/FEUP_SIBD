@@ -40,7 +40,7 @@ if (isset($submit)) {
             'stl' => 'application/x-navistyle',
                 ), true
                 )) {
-            echo "Its type is " . $_FILES['upfile']['tmp_name'];
+            echo "Its type is " . $_FILES['upfile'];
             throw new RuntimeException('Invalid file format.');
         }
 
