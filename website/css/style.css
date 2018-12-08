@@ -68,5 +68,41 @@ li{
 }
 
 .profile_sidebar{
-     list-style-type: none;
+    display: block;
+    list-style-type: none;
+}
+
+.changepwd{
+
+    display: inline;
+
+}
+
+.vertical-menu {
+  width: 200px; 
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black; 
+  display: block; 
+  padding: 12px; 
+  text-decoration: none; 
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #333;
+  color: white;
+}
+
+h2{
+  padding: 15px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
 }

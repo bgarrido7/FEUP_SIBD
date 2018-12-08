@@ -14,7 +14,7 @@ if (isset($save)) {
         header("Location: index.php");
     } else {
         $_SESSION['error_message'] = 'Login failed!';
-        header("Refresh:0");
+        header("Location: login.php");
    }
     
 

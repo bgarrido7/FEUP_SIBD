@@ -19,8 +19,9 @@
 
                 <ul class="navbar navbar-top navbar-right">
                     <?php if (isset($_SESSION['username'])) { ?>
-                        <li><a href="logout.php"> Logout</a></li>
+                        <li><a href="upload.php"> Upload STL</a></li>
                         <li><a href="profile.php"> Profile</a></li>
+                        <li><a href="logout.php"> Logout</a></li>
                     <?php } else { ?>
                         <li><a href="register.php"> Sign Up</a></li>
                         <li><a href="login.php"> Login</a></li>                        

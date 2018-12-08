@@ -12,26 +12,31 @@ if (isset($save)) {
     if (!$username || !$password || !$city || !$birthday) {
         $_SESSION['error_message'] = 'All fields are mandatory!';
         $_SESSION['form_values'] = $_POST;
+        header("Location: register.php");
     } else {
         try {
             if (isset($password[2])) {
                 createUser($username, $password, $birthday, $city);
                 $_SESSION['success_message'] = 'User registered with success!';
+                header("Location: index.php");
             }
             else{
                 $_SESSION['error_message'] = 'Password needs to be 3 characters long';
+                header("Location: register.php");
             }
         } catch (PDOException $e) {
 
             if (strpos($e->getMessage(), 'users_pkey') !== false)
                 $_SESSION['error_message'] = 'Username already exists!';
+                
             else
                 $_SESSION['error_message'] = 'FAILLL!';
 
             $_SESSION['form_values'] = $_POST;
+            header("Location: register.php");
         }
     }
-    header("Location: index.php");
+    
 }
 ?>
 <section class="form">
