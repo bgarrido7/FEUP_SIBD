@@ -18,7 +18,7 @@ CREATE TABLE projects(
 	username VARCHAR REFERENCES users(username) NOT NULL,
 	description TEXT,
 	image_path TEXT,
-	stl_path TEXT,
+	stl_path TEXT NOT NULL,
   	category VARCHAR REFERENCES category(name) NOT NULL
 );
 
