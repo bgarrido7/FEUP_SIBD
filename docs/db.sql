@@ -17,7 +17,12 @@ CREATE TABLE projects(
 	name VARCHAR NOT NULL,
 	username VARCHAR REFERENCES users(username) NOT NULL,
 	description TEXT,
-	image_path TEXT
+	image_path TEXT,
+  	category VARCHAR REFERENCES category(name) NOT NULL
+);
+
+CREATE TABLE category(
+	name VARCHAR NOT NULL PRIMARY KEY
 );
 
 CREATE TABLE comments(
