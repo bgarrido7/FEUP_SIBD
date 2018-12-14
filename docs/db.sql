@@ -61,3 +61,12 @@ INSERT INTO locations (city,x,y) VALUES ('Setúbal',38.510534, -8.971701);
 INSERT INTO locations (city,x,y) VALUES ('Viana do castelo',41.724302, -8.833359);
 INSERT INTO locations (city,x,y) VALUES ('Vila Real',41.290022, -7.721976);
 INSERT INTO locations (city,x,y) VALUES ('Viseu',40.655409, -7.927442);
+
+INSERT INTO category VALUES ('Medicine');
+INSERT INTO category VALUES ('Super Heroes');
+INSERT INTO category VALUES ('Animals');
+INSERT INTO category VALUES ('Engineering');
+INSERT INTO category VALUES ('Geek');
+INSERT INTO category VALUES ('Christmas');
+INSERT INTO category VALUES ('Collectables');
+INSERT INTO category VALUES ('Gift Ideas');
