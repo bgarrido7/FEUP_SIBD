@@ -5,13 +5,12 @@ if (isset($submit)) {
     try {
 
         if (
-                !isset($_FILES['upfile']['error']) ||
-                is_array($_FILES['upfile']['error'])
+                !isset($_FILES['upfile']['error']) || !isset($_FILES['image']['error']) || is_array($_FILES['upfile']['error']) || is_array($_FILES['image']['error'])
         ) {
-            throw new RuntimeException('Invalid parameters.');
+            $_SESSION['error_message'] = 'Error.';
         }
 
-        // Check $_FILES['upfile']['error'] value.
+        // Check file errors value.
         switch ($_FILES['upfile']['error']) {
             case UPLOAD_ERR_OK:
                 break;
@@ -24,31 +23,28 @@ if (isset($submit)) {
             default:
                 $_SESSION['error_message'] = 'Upload Error';
         }
-
-        if ($_FILES['upfile']['size'] > 1000000) {
-            $_SESSION['error_message'] = 'Invalid file type';
-        }
-
-
         $ext = substr($_FILES['upfile']['name'], -3);
-        if ($ext != 'stl') {
-            //echo "Its type is " . $_FILES['upfile'];
+        if ($_FILES['upfile']['size'] > 1000000) {
+            $_SESSION['error_message'] = 'Exceeded filesize limit';
+        } 
+        
+        elseif ($ext != 'stl') {
             $_SESSION['error_message'] = 'Invalid file type';
+        } 
+        
+        elseif (!move_uploaded_file($_FILES['upfile']['tmp_name'], sprintf('./stls/%s_%s', $_SESSION['username'], $_FILES['upfile']['name'])) || !move_uploaded_file($_FILES['image']['tmp_name'], sprintf('./images/%s_%s', $_SESSION['username'], $_FILES['image']['name']))) {
+            $_SESSION['error_message'] = 'Upload unsuccessful! -> moveuploaded files';
+        } 
+        
+        elseif(createProject($_SESSION['username'], $name, $description, sprintf('./images/%s_%s', $_SESSION['username'], $_FILES['image']['name']), sprintf('./stls/%s_%s', $_SESSION['username'], $_FILES['upfile']['name']), $category_selected)){
+            $_SESSION['success_message'] = 'Upload successful!';
         }
-
-
-        if (!move_uploaded_file($_FILES['upfile']['tmp_name'], sprintf('./stls/%s', $_FILES['upfile']['name']))) {
-            $_SESSION['error_message'] = 'Upload unsuccessful!';
-        }
-
-        $_SESSION['success_message'] = 'Upload successful!';
-
-        // createProject($_SESSION['username'], $_FILES['upfile']['name'], $description, $image_path, $stl_path, $category);
+        
     } catch (RuntimeException $e) {
 
         $_SESSION['error_message'] = 'Upload unsuccessful!';
     }
-    //header("Refresh:0");
+    header("Refresh:0");
 }
 ?>
 
@@ -65,6 +61,14 @@ if (isset($submit)) {
     <input type="file" name="image" id="upfile">
     Description:
     <textarea name="description" dirname="description.dir"></textarea>
+
+    <select name="category_selected">
+<?php foreach ($categories as $category) { ?>
+            <option value="<?= $category['name'] ?>"><?= $category['name'] ?></option>
+<?php } ?>
+
+
+    </select>
 
     <input type="submit" value="Upload" name="submit">
 </form>
