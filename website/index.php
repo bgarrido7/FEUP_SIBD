@@ -2,6 +2,6 @@
 include('database/connection.php');
 
 include('views/header.php');
-//Include something here
+include('views/homescreen.php');
 include('views/footer.php'); 
 ?>
