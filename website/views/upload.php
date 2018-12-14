@@ -1,10 +1,9 @@
 <?php
 extract($_POST);
+include('database/project.php');
 if (isset($submit)) {
     try {
 
-        // Undefined | Multiple Files | $_FILES Corruption Attack
-        // If this request falls under any of them, treat it invalid.
         if (
                 !isset($_FILES['upfile']['error']) ||
                 is_array($_FILES['upfile']['error'])
@@ -25,40 +24,30 @@ if (isset($submit)) {
                 throw new RuntimeException('Unknown errors.');
         }
 
-        // You should also check filesize here. 
         if ($_FILES['upfile']['size'] > 1000000) {
-            throw new RuntimeException('Exceeded filesize limit.');
+            $_SESSION['error_message'] = 'Invalid file type';
         }
 
-        // DO NOT TRUST $_FILES['upfile']['mime'] VALUE !!
-        // Check MIME Type by yourself.
-        $finfo = new finfo(FILEINFO_MIME_TYPE);
-        if (false === $ext = array_search(
-                $finfo->file($_FILES['upfile']['tmp_name']), array(
-            'stl' => 'application/sla',
-            'stl' => 'application/vnd.ms-pki.stl',
-            'stl' => 'application/x-navistyle',
-                ), true
-                )) {
-            echo "Its type is " . $_FILES['upfile'];
-            throw new RuntimeException('Invalid file format.');
+
+        $ext = substr($_FILES['upfile']['name'], -3);
+        if ($ext != 'stl') {
+            //echo "Its type is " . $_FILES['upfile'];
+            $_SESSION['error_message'] = 'Invalid file type';
         }
 
-        // You should name it uniquely.
-        // DO NOT USE $_FILES['upfile']['name'] WITHOUT ANY VALIDATION !!
-        // On this example, obtain safe unique name from its binary data.
-        if (!move_uploaded_file(
-                        $_FILES['upfile']['tmp_name'], sprintf('./stls/%s.%s', sha1_file($_FILES['upfile']['tmp_name']), $ext
-                        )
-                )) {
-            throw new RuntimeException('Failed to move uploaded file.');
+
+        if (!move_uploaded_file($_FILES['upfile']['tmp_name'], sprintf('./stls/%s', $_FILES['upfile']['name']))) {
+            $_SESSION['error_message'] = 'Upload unsuccessful!';
         }
 
-        echo 'File is uploaded successfully.';
+        $_SESSION['success_message'] = 'Upload successful!';
+
+        // createProject($_SESSION['username'], $_FILES['upfile']['name'], $description, $image_path, $stl_path, $category);
     } catch (RuntimeException $e) {
 
-        echo $e->getMessage();
+        $_SESSION['error_message'] = 'Upload unsuccessful!';
     }
+    //header("Refresh:0");
 }
 ?>
 
@@ -67,8 +56,13 @@ if (isset($submit)) {
 <h2>Upload STL</h2>
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
+    Name:
+    <input type="text" name="name">
     Select stl to upload:
     <input type="file" name="upfile" id="upfile">
+    Description:
+    <textarea name="description" dirname="description.dir"></textarea>
+
     <input type="submit" value="Upload" name="submit">
 </form>
 
