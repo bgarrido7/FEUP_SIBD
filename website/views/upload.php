@@ -16,12 +16,13 @@ if (isset($submit)) {
             case UPLOAD_ERR_OK:
                 break;
             case UPLOAD_ERR_NO_FILE:
-                throw new RuntimeException('No file sent.');
+                $_SESSION['error_message'] = 'No file sent.';
             case UPLOAD_ERR_INI_SIZE:
             case UPLOAD_ERR_FORM_SIZE:
-                throw new RuntimeException('Exceeded filesize limit.');
+                $_SESSION['error_message'] = 'Exceeded filesize limit.';
+
             default:
-                throw new RuntimeException('Unknown errors.');
+                $_SESSION['error_message'] = 'Upload Error';
         }
 
         if ($_FILES['upfile']['size'] > 1000000) {
@@ -60,6 +61,8 @@ if (isset($submit)) {
     <input type="text" name="name">
     Select stl to upload:
     <input type="file" name="upfile" id="upfile">
+    Select an image for your STL:
+    <input type="file" name="image" id="upfile">
     Description:
     <textarea name="description" dirname="description.dir"></textarea>
 
