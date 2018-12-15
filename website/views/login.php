@@ -3,10 +3,8 @@ extract($_POST);
 if (isset($save)) {
     include('database/connection.php');
     include ('database/user.php');
-
     $username = $_POST['username'];
     $password = $_POST['password'];
-
     if (isValidUser($username, $password)) {
         $_SESSION['success_message'] = 'Login successful!';
         $_SESSION['loggedin'] = true;
@@ -17,26 +15,31 @@ if (isset($save)) {
         header("Location: login.php");
    }
     
-
 }
 ?>
 
 
 <section id="content">
     <h2>Login</h2>
+    <div class="login">
+    <img class="image-logo" src="images/logoFinal.PNG"   alt="logo_image" >
     <form method="post">
+    <div class="register-assets">
+
         <label> Username:
             <input type="text" name="username" value="">
-        </label>
+        </label></div>
+        <div class="register-assets">
+
         <label> Password:
             <input type="password" name="password">
-        </label>
+        </label></div>
         <label>
-            <input type="submit" value="Login" name="save" class="btn btn-success">
+            <input type="submit" value="Login" name="save" class="btn login-btn btn-success">
 
         </label>
     </form>
-    
+    </div>
 
 </section>
 

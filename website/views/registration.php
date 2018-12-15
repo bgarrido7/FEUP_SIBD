@@ -25,13 +25,11 @@ if (isset($save)) {
                 header("Location: register.php");
             }
         } catch (PDOException $e) {
-
             if (strpos($e->getMessage(), 'users_pkey') !== false)
                 $_SESSION['error_message'] = 'Username already exists!';
                 
             else
                 $_SESSION['error_message'] = 'FAILLL!';
-
             $_SESSION['form_values'] = $_POST;
             header("Location: register.php");
         }
@@ -39,46 +37,54 @@ if (isset($save)) {
     
 }
 ?>
-<section class="form">
     <h2>Register</h2>
-    <form method="post">
-        <label> Username:
-            <input type="text" name="username" value="">
-        </label>
-        <label> Password:
-            <input type="password" name="password">
-        </label>
-        <label> Birthday:
-            <input type="date" name="birthday">
-        </label>
-        <label> City:
-            <select name="city">
-                <option value="Aveiro">Aveiro</option>
-                <option value="Beja">Beja</option>
-                <option value="Braga">Braga</option>
-                <option value="Bragança">Bragança</option>
-                <option value="Castelo Branco">Castelo Branco</option>
-                <option value="Coimbra">Coimbra</option>
-                <option value="Évora">Évora</option>
-                <option value="Faro">Faro</option>
-                <option value="Guarda">Guarda</option>
-                <option value="Leiria">Leiria</option>
-                <option value="Lisboa">Lisboa</option>
-                <option value="Portalegre">Portalegre</option>
-                <option value="Porto">Porto</option>
-                <option value="Santarém">Santarém</option>
-                <option value="Setúbal">Setúbal</option>
-                <option value="Viana do Castelo">Viana do Castelo</option>
-                <option value="Vila Real">Vila Real</option>
-                <option value="Viseu">Viseu</option>
-                
-            </select>
-        </label>
-        <label>
-            <input type="submit" value="Register" name="save" class="btn btn-success">
 
-        </label>
-    </form>
+<section class="form">
+    <div class="register">
+        <img class="image-logo" src="images/logoFinal.PNG"   alt="logo_image" >
+        <form method="post">
+            <div class="register-assets">
+            <label> Username:
+                <input type="text" name="username" value="">
+            </label></div>
+            <div class="register-assets">
+            <label> Password:
+                <input type="password" name="password">
+            </label></div>
+            <div class="register-assets">
+            <label> Birthday:
+                <input type="date" name="birthday">
+            </label></div>
+            <div class="register-assets">
+            <label> City:
+                <select name="city">
+                    <option value="Aveiro">Aveiro</option>
+                    <option value="Beja">Beja</option>
+                    <option value="Braga">Braga</option>
+                    <option value="Bragança">Bragança</option>
+                    <option value="Castelo Branco">Castelo Branco</option>
+                    <option value="Coimbra">Coimbra</option>
+                    <option value="Évora">Évora</option>
+                    <option value="Faro">Faro</option>
+                    <option value="Guarda">Guarda</option>
+                    <option value="Leiria">Leiria</option>
+                    <option value="Lisboa">Lisboa</option>
+                    <option value="Portalegre">Portalegre</option>
+                    <option value="Porto">Porto</option>
+                    <option value="Santarém">Santarém</option>
+                    <option value="Setúbal">Setúbal</option>
+                    <option value="Viana do Castelo">Viana do Castelo</option>
+                    <option value="Vila Real">Vila Real</option>
+                    <option value="Viseu">Viseu</option>
+                    
+                </select>
+            </label></div>
+            <div class="register-button">
+            <label>
+                <input type="submit" value="Create Account" name="save" class="btn btn-success">
+            </label></div>
+        
+    </form></div>
 </section>
 
 </body>

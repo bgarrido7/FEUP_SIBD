@@ -1,9 +1,26 @@
 h1{
     padding: 15px;
     text-align: center;
-    color: rgb(66, 66, 66) ;
+    color:rgb(66, 66, 66) ;
     font-size: 30px;
     font-family:verdana;
+    margin-left:10px ;
+    margin-right:10px ;
+}
+
+h2{
+    padding: 15px;
+    text-align: center;
+    color: white; /*rgb(66, 66, 66) ;*/
+    font-size: 30px;
+    font-family:Segoe UI;
+    background-color: #1abc9c;
+    margin-left:32.3% ;
+    margin-right:32.3% ;
+}
+
+.homescreen{
+    background-image: url("images/background.jpg");
 }
 
 .container {
@@ -11,14 +28,11 @@ h1{
     display: inline-block;
     margin-right: 10px;
     margin-left: 10px;
-
 }
 
 .image {
-    align-content: center;
     width:300px; 
     height: 200px;  
-
 }
 
 .overlay {
@@ -117,6 +131,18 @@ li{
 
 }
 
+.upload{
+    background-color: #eee;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.upload-assets{
+    font-family:verdana;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
 .messages{
     display:block;
     color: white;
@@ -150,74 +176,162 @@ li{
 }
 
 .vertical-menu {
-    width: 200px; 
+    margin: auto;
+    width: 33%;
+    height: 46%;
+    border: 3px solid #333;
+    padding: 20px;
+
 }
 
 .vertical-menu a {
-    background-color: #eee;
-    color: black; 
+    /*  background-color: #eee;
+    */color: black; 
     display: block; 
     padding: 12px; 
     text-decoration: none; 
+    font-family:verdana;
+    text-align: justify;
+
 }
 
 .vertical-menu a:hover {
     background-color: #ccc;
+    width: 23%;
 }
 
 .vertical-menu a.active {
     background-color: #333;
     color: white;
-}
+    width: 23%;
+    text-align: justify;
 
-h2{
-    padding: 15px;
-    text-align: center;
-    background: #1abc9c;
+}
+.vertical-menu a.delete{
+    background-color: #333;
     color: white;
-    font-size: 30px;
+    width: 23%;
+
+}
+.vertical-menu a.delete:hover {
+    background-color: rgb(238, 96, 96);
+    color: white;
 }
 
+input[type="text"] {
+    padding: 12px 0.1px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="password"] {
+    padding: 12px 0.5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+select{
+    padding: 12px 55px;
+    border: 1px solid #ccc;
+
+}
 
 .dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
 }
 
+.image-logo{
+    width:600px; 
+    height:150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+    margin-top:10px;
+}
+
+.register{
+    margin: auto;
+    width: 33%;
+    height: 61%;
+    border: 3px solid #333;
+    padding: 20px;
+}
+
+.login{
+    margin: auto;
+    width: 33%;
+    height: 45%;
+    border: 3px solid #333;
+    padding: 20px;
+}
+
+.register-assets{
+    font-family: verdana;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 23px;
+}
+
+.btn{
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #333;
+    float: right;
+    font-family: Verdana;
+    margin-top: 20px;
+}
+
+.login-btn{
+    padding: 15px 100px;
+    float:left;
+    margin-left:32%;
+}
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #333;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 .dropdown-content a {
-  float: none;
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
 .dropdown-content a:hover {
-  background-color: #333;
+    background-color: #333;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 
 
 .column {
-  float: right;
-  width: 40%;
+    float: right;
+    width: 40%;
 }
