@@ -332,6 +332,28 @@ select{
 
 
 .column {
-    float: right;
     width: 40%;
+}
+
+.column.right {
+    width: auto;
+    padding: 50px;
+    float: right;
+    border-style: solid;
+
+}
+.column.left{
+    float: left;
+    width: 10em;
+    position: fixed;
+    z-index: 1;
+    height: 10em;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+.row {
+    padding: 5px;
+    border-style: solid;
+
 }
