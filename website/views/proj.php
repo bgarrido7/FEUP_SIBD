@@ -14,12 +14,10 @@
 
     <!-- Product Description -->
     <div class="product-description">
-        <span>Category:<?=$display_project['category']?></span>
-        <h1><?= $display_project['name']?></h1>
-        <p><?= $display_project['description']?></p>
+        <span>Category:<?= $display_project['category'] ?></span>
+        <h1><?= $display_project['name'] ?></h1>
+        <p><?= $display_project['description'] ?></p>
     </div>
-
-    <div class=""
-
+</div>
 
 
