@@ -1,5 +1,6 @@
 <?php
 if(!isset($_SESSION)){
+    session_save_path('./session');
     session_start();
 }
 try{

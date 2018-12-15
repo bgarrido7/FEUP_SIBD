@@ -24,7 +24,7 @@ if (isset($submit)) {
                 $_SESSION['error_message'] = 'Upload Error';
         }
         $ext = substr($_FILES['upfile']['name'], -3);
-        if ($_FILES['upfile']['size'] > 1000000) {
+        if ($_FILES['upfile']['size'] > 100000000) {
             $_SESSION['error_message'] = 'Exceeded filesize limit';
         } 
         
@@ -55,7 +55,7 @@ if (isset($submit)) {
 <form action="upload.php" method="post" enctype="multipart/form-data">
     Name:
     <input type="text" name="name">
-    Select stl to upload:
+    Select stl to upload (100MB max):
     <input type="file" name="upfile" id="upfile">
     Select an image for your STL:
     <input type="file" name="image" id="upfile">

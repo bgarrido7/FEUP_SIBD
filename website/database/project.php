@@ -11,9 +11,9 @@ function createProject($username, $name, $description, $image_path, $stl_path, $
 function getProjectsFromCategory($cat_name) {
     global $conn;
 
-    $stmt = $conn->prepare('SELECT * FROM category WHERE name = ?');
+    $stmt = $conn->prepare('SELECT * FROM projects WHERE category = ?');
     $stmt->execute(array($cat_name));
-    return $stmt->fetch();
+    return $stmt->fetchAll();
 }
 
 ?>
