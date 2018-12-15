@@ -1,3 +1,8 @@
+body{
+    padding:10px;
+    padding-bottom:60px;
+
+}
 h2{
     padding: 15px;
     text-align: center;
@@ -8,8 +13,8 @@ h2{
     margin-left:32% ;
     margin-right:32% ;
     position: relative;
-  }
-  h1{
+}
+h1{
     padding: 15px;
     text-align: center;
     color:rgb(66, 66, 66) ;
@@ -17,10 +22,10 @@ h2{
     font-family:verdana;
     margin-left:10px ;
     margin-right:10px ;
-  }
-  .homescreen{
+}
+.homescreen{
     background-image: url("images/background.jpg");
-  }
+}
 .container {
     position: relative;
     display: inline-block;
@@ -29,38 +34,38 @@ h2{
 }
 
 .image {
-  width:300px; 
-  height: 200px;  
+    width:300px; 
+    height: 200px;  
 }
 
 .overlay {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  background-color: rgb(95, 201, 183);
-  overflow: hidden;
-  width: 300px;
-  height:0;
-  transition: .5s ease;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(95, 201, 183);
+    overflow: hidden;
+    width: 300px;
+    height:0;
+    transition: .5s ease;
 }
 
 .container:hover .overlay {
-  bottom: 0;
-  height: 100%;
+    bottom: 0;
+    height: 100%;
 }
 
 .text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-family:verdana;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family:verdana;
 
 }
 .navbar{
@@ -104,7 +109,7 @@ h2{
 
 }
 .navbar a:hover{
-background-color:rgb(37, 37, 37) ;
+    background-color:rgb(37, 37, 37) ;
 }
 .navbar div:hover{
     background-color:rgb(37, 37, 37) ;
@@ -180,26 +185,26 @@ li{
 }
 
 .vertical-menu a {
-/*  background-color: #eee;
-  */color: black; 
-  display: block; 
-  padding: 12px; 
-  text-decoration: none; 
-  font-family:verdana;
-  text-align: justify;
-  width: 35%;
+    /*  background-color: #eee;
+    */color: black; 
+    display: block; 
+    padding: 12px; 
+    text-decoration: none; 
+    font-family:verdana;
+    text-align: justify;
+    width: 35%;
 }
 
 .vertical-menu a:hover {
-  background-color: #ccc;
-  width: 35%;
+    background-color: #ccc;
+    width: 35%;
 }
 
 .vertical-menu a.active {
-  background-color: #333;
-  color: white;
-  width: 35%;
-  text-align: justify;
+    background-color: #333;
+    color: white;
+    width: 35%;
+    text-align: justify;
 
 }
 .vertical-menu a.delete{
@@ -210,29 +215,29 @@ li{
 }
 .vertical-menu a.delete:hover {
     background-color: rgb(238, 96, 96);
-   color: white;
-  }
-  input[type="text"] {
+    color: white;
+}
+input[type="text"] {
     padding: 12px 0.1px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-  }
-  input[type="password"] {
+}
+input[type="password"] {
     padding: 12px 0.5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-  }
-  input[type="date"] {
+}
+input[type="date"] {
     padding: 12px 15px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-  }
-  select{
+}
+select{
     padding: 12px 55px;
     border: 1px solid #ccc;
 
-  }
-  
+}
+
 .dropdown .dropbtn {
     font-size: 16px;  
     border: none;
@@ -242,23 +247,25 @@ li{
     font-family: inherit;
     margin: 0;
 }
-  .image-logo{
-    width:90%; 
-    height:20%;
+.image-logo{
+    width:100%; 
+    height:auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 35px;
     margin-top:10px;
-  }
+}
 .register{
     margin-left: 32%;
     width: 33%;
-    position:fixed;
-    height: 60%;
+    display: block ;
+    height: 40em;
     border: 3px solid #333;
     padding: 20px;
-    height: auto;
+    overflow:auto;
+    bottom: 500px;
+
 }
 .login{
     margin: auto;

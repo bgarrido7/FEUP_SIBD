@@ -19,9 +19,10 @@
                                 <?php
                                 include ('database/category.php');
                                 $categories = getAllCategories();
-                                foreach ($categories as $category) { ?>
-                                    <a href="list_projects.php?cat_name=<?=$category['name']?>"><?= $category['name'] ?></a>
-                                <?php } ?>
+                                foreach ($categories as $category) {
+                                    ?>
+                                    <a href="list_projects.php?cat_name=<?= $category['name'] ?>"><?= $category['name'] ?></a>
+<?php } ?>
 
                             </div>
                         </div> 
@@ -31,14 +32,14 @@
 
 
                 <ul class="navbar navbar-top navbar-right">
-                    <?php if (isset($_SESSION['username'])) { ?>
+<?php if (isset($_SESSION['username'])) { ?>
                         <li><a href="upload.php"> Upload STL</a></li>
                         <li><a href="profile.php"> Profile</a></li>
                         <li><a href="logout.php"> Logout</a></li>
-                    <?php } else { ?>
+<?php } else { ?>
                         <li><a href="register.php"> Sign Up</a></li>
                         <li><a href="login.php"> Login</a></li>                        
-                    <?php } ?>
+<?php } ?>
                 </ul>
 
 
@@ -49,18 +50,19 @@
 
         <div>
             <div class="messages">
-                <?php if (isset($_ERROR_MESSAGE)) { ?>
+                    <?php if (isset($_ERROR_MESSAGE)) { ?>
                     <div class="message errors">
-                        <?= $_ERROR_MESSAGE ?>  
+                    <?= $_ERROR_MESSAGE ?>  
                     </div>
                 <?php } ?>
 
-                <?php if (isset($_SUCCESS_MESSAGE)) { ?>
+                    <?php if (isset($_SUCCESS_MESSAGE)) { ?>
                     <div class="message success">
-                        <?= $_SUCCESS_MESSAGE ?>  
+                    <?= $_SUCCESS_MESSAGE ?>  
                     </div>
-                <?php } ?>
+<?php } ?>
 
             </div>
 
         </div>
+    </body>

@@ -16,4 +16,12 @@ function getProjectsFromCategory($cat_name) {
     return $stmt->fetchAll();
 }
 
+function getProjectFromId($proj_id){
+     global $conn;
+
+    $stmt = $conn->prepare('SELECT * FROM projects WHERE projectid = ?');
+    $stmt->execute(array($proj_id));
+    return $stmt->fetch();
+    
+}
 ?>
