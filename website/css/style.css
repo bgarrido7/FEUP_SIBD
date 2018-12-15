@@ -1,4 +1,15 @@
-h1{
+h2{
+    padding: 15px;
+    text-align: center;
+    color: white; /*rgb(66, 66, 66) ;*/
+    font-size: 30px;
+    font-family:'Segoe UI';
+    background-color: #1abc9c;
+    margin-left:32% ;
+    margin-right:32% ;
+    position: relative;
+  }
+  h1{
     padding: 15px;
     text-align: center;
     color:rgb(66, 66, 66) ;
@@ -6,23 +17,10 @@ h1{
     font-family:verdana;
     margin-left:10px ;
     margin-right:10px ;
-}
-
-h2{
-    padding: 15px;
-    text-align: center;
-    color: white; /*rgb(66, 66, 66) ;*/
-    font-size: 30px;
-    font-family:Segoe UI;
-    background-color: #1abc9c;
-    margin-left:32.3% ;
-    margin-right:32.3% ;
-}
-
-.homescreen{
+  }
+  .homescreen{
     background-image: url("images/background.jpg");
-}
-
+  }
 .container {
     position: relative;
     display: inline-block;
@@ -31,38 +29,38 @@ h2{
 }
 
 .image {
-    width:300px; 
-    height: 200px;  
+  width:300px; 
+  height: 200px;  
 }
 
 .overlay {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    background-color: rgb(95, 201, 183);
-    overflow: hidden;
-    width: 300px;
-    height:0;
-    transition: .5s ease;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgb(95, 201, 183);
+  overflow: hidden;
+  width: 300px;
+  height:0;
+  transition: .5s ease;
 }
 
 .container:hover .overlay {
-    bottom: 0;
-    height: 100%;
+  bottom: 0;
+  height: 100%;
 }
 
 .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family:verdana;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family:verdana;
 
 }
 .navbar{
@@ -96,7 +94,6 @@ h2{
     font-family:verdana;
     float:left;
 }
-
 .navbar div{
     color: white;
     text-align: center;
@@ -107,13 +104,11 @@ h2{
 
 }
 .navbar a:hover{
-    background-color:rgb(37, 37, 37) ;
+background-color:rgb(37, 37, 37) ;
 }
-
 .navbar div:hover{
     background-color:rgb(37, 37, 37) ;
 }
-
 
 li{
     float:left;
@@ -123,11 +118,11 @@ li{
 .navbar.navbar-bottom{
     list-style-type: none;
     position: fixed;
+    right: 0;
     bottom: 0;
-    width: 100%;
+    left: 0;
     padding: 0;
     height: 30;
-
 
 }
 
@@ -142,7 +137,6 @@ li{
     margin-bottom: 30px;
     text-align: justify;
 }
-
 .messages{
     display:block;
     color: white;
@@ -176,72 +170,69 @@ li{
 }
 
 .vertical-menu {
-    margin: auto;
+    margin-left: 32%;
     width: 33%;
-    height: 46%;
+    position:fixed;
+    height: 60%;
     border: 3px solid #333;
     padding: 20px;
-
+    height: auto;
 }
 
 .vertical-menu a {
-    /*  background-color: #eee;
-    */color: black; 
-    display: block; 
-    padding: 12px; 
-    text-decoration: none; 
-    font-family:verdana;
-    text-align: justify;
-
+/*  background-color: #eee;
+  */color: black; 
+  display: block; 
+  padding: 12px; 
+  text-decoration: none; 
+  font-family:verdana;
+  text-align: justify;
+  width: 35%;
 }
 
 .vertical-menu a:hover {
-    background-color: #ccc;
-    width: 23%;
+  background-color: #ccc;
+  width: 35%;
 }
 
 .vertical-menu a.active {
-    background-color: #333;
-    color: white;
-    width: 23%;
-    text-align: justify;
+  background-color: #333;
+  color: white;
+  width: 35%;
+  text-align: justify;
 
 }
 .vertical-menu a.delete{
     background-color: #333;
     color: white;
-    width: 23%;
+    width: 35%;
 
 }
 .vertical-menu a.delete:hover {
     background-color: rgb(238, 96, 96);
-    color: white;
-}
-
-input[type="text"] {
+   color: white;
+  }
+  input[type="text"] {
     padding: 12px 0.1px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-}
-
-input[type="password"] {
+  }
+  input[type="password"] {
     padding: 12px 0.5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-}
-
-input[type="date"] {
+  }
+  input[type="date"] {
     padding: 12px 15px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-}
-
-select{
+  }
+  select{
     padding: 12px 55px;
     border: 1px solid #ccc;
 
-}
-
+  }
+  
 .dropdown .dropbtn {
     font-size: 16px;  
     border: none;
@@ -251,40 +242,37 @@ select{
     font-family: inherit;
     margin: 0;
 }
-
-.image-logo{
-    width:600px; 
-    height:150px;
+  .image-logo{
+    width:90%; 
+    height:20%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 35px;
     margin-top:10px;
-}
-
+  }
 .register{
-    margin: auto;
+    margin-left: 32%;
     width: 33%;
-    height: 61%;
+    position:fixed;
+    height: 60%;
     border: 3px solid #333;
     padding: 20px;
+    height: auto;
 }
-
 .login{
     margin: auto;
     width: 33%;
-    height: 45%;
+    height: auto;
     border: 3px solid #333;
     padding: 20px;
 }
-
 .register-assets{
     font-family: verdana;
     text-align: center;
     margin-bottom: 30px;
     font-size: 23px;
 }
-
 .btn{
     border: none;
     color: white;
@@ -297,18 +285,25 @@ select{
     font-family: Verdana;
     margin-top: 20px;
 }
-
 .login-btn{
     padding: 15px 100px;
-    float:left;
-    margin-left:32%;
-}
-.dropdown-content {
+    background-color: #333;
+    margin: auto;
+    border: none;
+    color: white;
+    padding: 15px 60px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #333;
+    font-family: Verdana;
+    margin-top: 20px;
+    margin-left: 35%;
+
+}.dropdown-content {
     display: none;
     position: absolute;
     background-color: #333;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -328,8 +323,6 @@ select{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-
 
 .column {
     width: 40%;
