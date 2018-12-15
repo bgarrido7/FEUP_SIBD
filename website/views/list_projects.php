@@ -3,16 +3,16 @@
     Category: <?= $cat_name ?>
 </h2>
 
-<?php if (isset($products[0])) { ?>
+<?php if (isset($projects[0])) { ?>
 
     <div class="column right">
-        <?php foreach ($products as $product) { ?>
+        <?php foreach ($projects as $project) { ?>
             <div class="row">
-                <h1><?= $product['name'] ?></h1>
-                <a class="image" href="view_proj.php?proj_id=<?php $product['projectid'] ?>">
-                    <img class="image" src="<?= $product['image_path'] ?>" alt="pokemon_image" >
+                <h1><?= $project['name'] ?></h1>
+                <a class="image" href="view_proj.php?proj_id=<?= $project['projectid'] ?>">
+                    <img class="image" src="<?= $project['image_path'] ?>" alt="<?= $project['name'] ?>" >
                 </a>
-                <p><?= $product['description'] ?></p>
+                <p class="description"><?= $project['description'] ?></p>
 
             </div>
         <?php } ?>
@@ -27,7 +27,7 @@
     </div>
 <?php } else { ?>
     <div class="column right">
-           No projects within this category;
+        No projects within this category
     </div>
 
 <?php } ?>
