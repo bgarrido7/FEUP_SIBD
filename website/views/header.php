@@ -10,11 +10,24 @@
 
                 <ul class="navbar navbar-top navbar-left">
                     <li><a href="index.php"><strong>STradeL</strong></a></li>
-
-
                     <li><a href="search.php"> Search</a></li>
+                    <li><div class="dropdown">
+                            <button class="dropbtn">Dropdown 
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <?php
+                                include ('database/category.php');
+                                $categories = getAllCategories();
+                                foreach ($categories as $category) { ?>
+                                    <a href="list_projects.php?cat_name=<?=$category['name']?>"><?= $category['name'] ?></a>
+                                <?php } ?>
 
+                            </div>
+                        </div> 
+                    </li>
                 </ul>
+
 
 
                 <ul class="navbar navbar-top navbar-right">
