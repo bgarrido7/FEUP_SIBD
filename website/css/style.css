@@ -414,7 +414,7 @@ input[type="text"] {
     margin-right:1%;
     position: relative;*/
     height:50%;
-    width:42%;
+    width:47%;
     float:left;
     overflow:hidden;
     margin-top:5%;
@@ -451,13 +451,14 @@ input[type="text"] {
 */
 }
 .left-column img {
-    width: auto;
-    height: auto;
-    position: initial;
-    margin-left:10%;
-    margin-right:10%;
-    overflow: scroll;
-    left: 5%;
+    height:60%;
+    width:auto;
+    max-width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 35px;
+    margin-top:5px;
+    left: 1%;
     top: 25%;
     border: 5px solid #f1f1f1;
     border-radius: 5px;
