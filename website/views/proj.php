@@ -1,11 +1,16 @@
 <?php
 extract($_POST);
-
-if (isset($_POST['submit'])) {
+if (isset($_POST['stared_x'])) {
+    addStar($_SESSION['username'], $display_project['projectid']);
+    header("Refresh:0");
+}
+if (isset($_POST['submit']) && strlen(($_POST['comment'])) > 1) {
     $text = $_POST['comment'];
     addComment($_SESSION['username'], $display_project['projectid'], $text);
     header("Refresh:0");
 }
+
+
 ?>
 
 <h2>
@@ -24,22 +29,27 @@ if (isset($_POST['submit'])) {
     <div class="product-description">
         <span>Category:<?= $display_project['category'] ?></span>
         <h1><?= $display_project['name'] ?></h1>
-        <p><?= $display_project['description'] ?></p>
+        <p><?= $display_project['description'] ?></p>    
     </div>
+    <form class="form" method="post">
+       Stars:   <?= $stars['count'] ?><input type="image" src="./images/star.png" alt="stared" name="stared"> 
+    </form>
 </div>
 
 <div class="commentWrap">
     <?php if (isset($comments[0])) { ?>
-        <div class="comments">
-            <?php foreach ($comments as $comment) { ?>
+
+        <?php foreach ($comments as $comment) { ?>
+            <div class="comments">
                 <p><?= $comment['text'] ?></p>
                 <span class="comments_user">By: <?= $comment['users'] ?></span>
-            <?php } ?>
-        </div>
+            </div>
+        <?php } ?>
+
     <?php } ?>
 
     <?php if (isset($_SESSION['username'])) { ?>
-        <form method="post">
+        <form class="form" method="post">
             <input type="text" name="comment" class="new_comment" placeholder="New comment...">
             <input type="submit" value="comment" name="submit" class="login-btn btn-success">
         </form>

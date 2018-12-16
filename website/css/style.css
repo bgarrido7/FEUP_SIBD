@@ -424,18 +424,25 @@ select{
 }
 
 .commentWrap{
-    width: 100%;
+    width: 95%;
+    position: relative;
+    margin-top: 550px;
+    display: block;
     margin-bottom: 100px;
 
 }
 .comments{
-    display: block;
+
     border: 2px solid #dedede;
     background-color: #f1f1f1;
     border-radius: 5px;
     padding: 10px;
-    margin-top: 550px;
+    margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.form {
+    height: auto;
 }
 #loginReminder{
     background-color: #333;
@@ -451,7 +458,7 @@ select{
 }
 
 .new_comment{
-    margin-top: 20px;
+    margin-top: 10px;
     width: 100%;
 }
 

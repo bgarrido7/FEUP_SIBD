@@ -35,7 +35,6 @@ CREATE TABLE comments(
 CREATE TABLE stared(
 	users VARCHAR REFERENCES users(username) NOT NULL,
 	projects SERIAL REFERENCES projects(projectID) NOT NULL,
-	nr INTEGER default 0
 );
 
 CREATE TABLE wishlist(

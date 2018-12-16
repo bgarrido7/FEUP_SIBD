@@ -32,12 +32,36 @@ function getCommentsFromId($proj_id) {
     return $stmt->fetchAll();
 }
 
-function addComment($user,$proj_id, $comment) {
+function addComment($user, $proj_id, $comment) {
     global $conn;
 
     $stmt = $conn->prepare('INSERT INTO comments VALUES (?, ?, ?)');
     $stmt->execute(array($user, $proj_id, $comment));
     return 1;
+}
+
+function addStar($user, $proj_id) {
+    global $conn;
+
+    $stmt = $conn->prepare('INSERT INTO stared VALUES (?, ?)');
+    $stmt->execute(array($user, $proj_id));
+    return 1;
+}
+
+function isAlreadyStared($user, $proj_id) {
+    global $conn;
+
+    $stmt = $conn->prepare('INSERT INTO stared VALUES (?, ?)');
+    $stmt->execute(array($user, $proj_id));
+    return 1;
+}
+
+function countStars($proj_id) {
+    global $conn;
+
+    $stmt = $conn->prepare('SELECT COUNT (DISTINCT users) FROM stared WHERE projects = ? ');
+    $stmt->execute(array($proj_id));
+    return $stmt->fetch();
 }
 
 ?>

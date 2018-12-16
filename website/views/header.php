@@ -12,7 +12,7 @@
                     <li><a href="index.php"><strong>STradeL</strong></a></li>
                     <li><a href="search.php"> Search</a></li>
                     <li><div class="dropdown">
-                            <button class="dropbtn">Dropdown 
+                            <button class="dropbtn">Categories
                                 <i class="fa fa-caret-down"></i>
                             </button>
                             <div class="dropdown-content">
