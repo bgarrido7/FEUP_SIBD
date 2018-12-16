@@ -330,10 +330,10 @@ input[type="text"] {
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    background-color: #333;
     font-family: Verdana;
     margin-top: 20px;
     float:right;
+    background-color: rgb(24, 23, 23);  
 }
 .login-btn{
     padding: 15px 100px;
@@ -376,36 +376,38 @@ input[type="text"] {
 }
 
 .column {
-    width: 100%;
-    padding: 50px;
-
+    width: 40%;
 }
 
+.column.right {
+    width: 40%;
+    max-width: 50%;
+    padding: 50px;
+    float: right;
+    border-style: solid;
+}
 .description {
     text-overflow: ellipsis; 
     overflow: hidden;
     white-space: nowrap; 
 }
 
-.row {
-    width: 45%;
-    padding: 5px;
-    margin: 5px 5px;
-    display: block;
+.column.left{
     float: left;
+    width: 10em;
+    position: fixed;
+    z-index: 1;
+    height: 10em;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+.row {
+    padding: 5px;
     border-style: solid;
-    border-color: #333;
-
 }
 .image-product {
  background-color: #333;
-}
-
-.image.projects{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
 }
 
 .left-column {
@@ -418,7 +420,8 @@ input[type="text"] {
     float:left;
     overflow:hidden;
     margin-top:5%;
-    margin-left:3%;
+    margin-left:1%;
+
 }
 
 .right-column {
@@ -430,7 +433,7 @@ input[type="text"] {
     float: right;
     width: 45%;
     margin-top: 60px;*/
-    height:50%;
+    height:auto;
     width:42%;
     float:right;
     overflow:hidden;
@@ -439,11 +442,12 @@ input[type="text"] {
 
 }
 .commentWrap{
-    width: 94%;
-    height: 50%;
+    width: 90%;
+    height: auto;
     overflow:hidden;
-    margin-right:3%;
-    margin-left:3%;
+
+    margin-right:10%;
+    margin-left:5%;
  /*   position: relative;
     margin-top: 550px;
     display: block;
@@ -451,13 +455,15 @@ input[type="text"] {
 */
 }
 .left-column img {
-    width: auto;
-    height: auto;
-    position: initial;
-    margin-left:10%;
-    margin-right:10%;
-    overflow: scroll;
-    left: 5%;
+   /* width:87%;/* 198px;*/
+ /*   height:85%; /*148px;*/
+    height:350px;
+    width:auto;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 35px;
+    margin-top:5px;
+    left: 1%;
     top: 25%;
     border: 5px solid #f1f1f1;
     border-radius: 5px;
@@ -467,13 +473,16 @@ input[type="text"] {
 .product-description {
     border-bottom: 1px solid #E1E8EE;
     margin-bottom: 10px;
+    margin-right:10%;
 }
 .product-description span {
     font-size: 12px;
-    color: #358ED7;
+    color: #1abc9c;
+    font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
+    font-family: verdana;
 }
 .product-description h1 {
     font-weight: 300;
@@ -487,21 +496,30 @@ input[type="text"] {
     font-weight: 300;
     color: #86939E;
     line-height: 24px;
+    font-family: verdana;
+
 }
 
-
 .comments{
-
     border: 2px solid #dedede;
     background-color: #f1f1f1;
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 2%;
+    font-family: verdana;
+    font-size: 15px;
+    text-align: justify;
 }
+.comments_user{
+    font-family: verdana;
+    color: #999898;
+    font-size: 13px;
 
+}
 .form {
     height: auto;
+    font-family: verdana;
 }
 #loginReminder{
     background-color: #333;
@@ -513,19 +531,16 @@ input[type="text"] {
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    cursor: pointer;   
+    cursor: pointer; 
+    background-color: rgb(24, 23, 23);  
 }
-
+.btn-comment-not-logged{
+    font-family: verdana;
+    float:left;
+    margin-bottom: 2%;
+}
 .new_comment{
     margin-top: 10px;
     width: 100%;
 }
 
-.downloadBtn{
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    padding: 12px 30px;
-    cursor: pointer;
-    font-size: 20px;
-}
