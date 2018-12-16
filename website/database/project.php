@@ -48,13 +48,26 @@ function addStar($user, $proj_id) {
     return 1;
 }
 
-function isAlreadyStared($user, $proj_id) {
+function removeStar($user, $proj_id) {
     global $conn;
 
-    $stmt = $conn->prepare('INSERT INTO stared VALUES (?, ?)');
+    $stmt = $conn->prepare('DELETE FROM stared WHERE users = ?  AND projects = ? ');
     $stmt->execute(array($user, $proj_id));
     return 1;
 }
+
+function isAlreadyStared($user, $proj_id) {
+    global $conn;
+
+    $stmt = $conn->prepare('SELECT users FROM stared WHERE users = ? AND projects = ?');
+    $stmt->execute(array($user, $proj_id));
+
+    if (null != $stmt->fetch()) {
+        return 1;
+    }
+    return 0;
+}
+
 
 function countStars($proj_id) {
     global $conn;

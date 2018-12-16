@@ -222,24 +222,24 @@ input[type="text"] {
     padding: 12px 0.1px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-  }
-  input[type="password"] {
+}
+input[type="password"] {
     padding: 12px 0.5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-  }
-  input[type="date"] {
+}
+input[type="date"] {
     padding: 12px 15px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-  }
-  select{
+}
+select{
     padding: 12px 55px;
     border: 1px solid #ccc;
     font-family: verdana;
     font-size:80%;
-  }
-  input[type="file"] {
+}
+input[type="file"] {
     background-color: #333;
     border: none;
     color: white;
@@ -249,7 +249,7 @@ input[type="text"] {
     margin-top:15px;
     padding: 6px 20px;
     text-align: right;
-  }
+}
 
 .custom-file-upload {
     border: 1px solid #ccc;
@@ -257,7 +257,7 @@ input[type="text"] {
     padding: 6px 12px;
     cursor: pointer;
 }
-  textarea{
+textarea{
     border: none;
     color: black;
     height: 10%;
@@ -267,7 +267,7 @@ input[type="text"] {
     background-color: white;
     font-family: Verdana;
     width: 70%;
-  }
+}
 .category{
     margin-top:auto;
     margin-bottom: auto;
@@ -377,8 +377,8 @@ input[type="text"] {
 
 .column {
     width: 100%;
-    padding: 50px;
-
+    height: 100%;
+    text-align: center;
 }
 
 .description {
@@ -390,15 +390,14 @@ input[type="text"] {
 .row {
     width: 45%;
     padding: 5px;
-    margin: 5px 5px;
-    display: block;
-    float: left;
-    border-style: solid;
-    border-color: #333;
+    margin: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+  
 
 }
 .image-product {
- background-color: #333;
+    background-color: #333;
 }
 
 .image.projects{
@@ -430,7 +429,7 @@ input[type="text"] {
     border-width: 35px;
     border-style: solid;
     border-color: #fdfdfd;
-  
+
 }
 .commentWrap{
     width: 90%;

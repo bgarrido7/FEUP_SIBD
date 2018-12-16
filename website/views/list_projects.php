@@ -12,13 +12,19 @@
                 <a class="image" href="view_proj.php?proj_id=<?= $project['projectid'] ?>">
                     <img class="image projects" src="<?= $project['image_path'] ?>" alt="<?= $project['name'] ?>" >
                 </a>
-                <h3>Description</h3>
                 <?php $stars = countStars($project['projectid']); ?>
-                <input type="image" src="./images/star.png" alt="stared" name="stared"> :  <?= $stars['count'] ?>
+                <?php if (!isAlreadyStared($_SESSION['username'], $project['projectid'])) { ?>
+                    <input type="image" src="./images/star_full.png" alt="stared" name="stared"> :  <?= $stars['count'] ?>
+                <?php } else { ?>
+                    <input type="image" src="./images/star_empty.png" alt="stared" name="stared"> :  <?= $stars['count'] ?>
+                <?php } ?>
+                <h3>Description</h3>
                 <p class="description"><?= $project['description'] ?></p>
 
             </div>
         <?php } ?>
+    </div>
+    <div style="height: 100px;"> 
     </div>
 
 <?php } else { ?>

@@ -1,7 +1,10 @@
 <?php
 extract($_POST);
-if (isset($_POST['stared_x'])) {
+if (isset($_POST['stared_x']) && !isAlreadyStared($_SESSION['username'], $proj_id)) {
     addStar($_SESSION['username'], $display_project['projectid']);
+    header("Refresh:0");
+} elseif (isset($_POST['stared_x']) && isAlreadyStared($_SESSION['username'], $proj_id)) {
+    removeStar($_SESSION['username'], $display_project['projectid']);
     header("Refresh:0");
 }
 if (isset($_POST['submit']) && strlen(($_POST['comment'])) > 1) {
@@ -9,12 +12,10 @@ if (isset($_POST['submit']) && strlen(($_POST['comment'])) > 1) {
     addComment($_SESSION['username'], $display_project['projectid'], $text);
     header("Refresh:0");
 }
-
-
 ?>
 <!--
 <h2>
-    <?= $display_project['name'] ?>
+<?= $display_project['name'] ?>
 </h2>
 -->
 
@@ -32,7 +33,11 @@ if (isset($_POST['submit']) && strlen(($_POST['comment'])) > 1) {
         <p><?= $display_project['description'] ?></p>    
     </div>
     <form class="form" method="post">
-       Stars:   <?= $stars['count'] ?><input type="image" src="./images/star.png" alt="stared" name="stared"> 
+        <?php if (!isAlreadyStared($_SESSION['username'], $proj_id)) { ?>
+            Stars (click to star):   <?= $stars['count'] ?><input type="image" src="./images/star_full.png" alt="stared" name="stared"> 
+        <?php } else { ?>
+            Stars (click to star):   <?= $stars['count'] ?><input type="image" src="./images/star_empty.png" alt="stared" name="stared"> 
+        <?php } ?>
     </form>
     <a href="<?= $display_project['stl_path'] ?>" download>
         <button class="downloadBtn"> Download</button>
