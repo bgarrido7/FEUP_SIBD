@@ -1,0 +1,554 @@
+body{
+    padding:10px;
+    padding-bottom:60px;
+}
+h2{
+    padding: 15px;
+    text-align: center;
+    color: white; 
+    font-size: 30px;
+    font-family:'Segoe UI';
+    background-color: #1abc9c;
+    margin-left:32% ;
+    margin-right:32% ;
+    position: relative;
+}
+h1{
+    padding: 15px;
+    text-align: center;
+    color:rgb(66, 66, 66) ;
+    font-size: 30px;
+    font-family:verdana;
+    margin-left:10px ;
+    margin-right:10px ;
+}
+.homescreen{
+    background-image: url("images/background.jpg");
+}
+.container {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.image {
+    width:300; 
+    height: 200;
+}
+.image-logo{
+    width:90%; 
+    height:20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+    margin-top:10px;
+}
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(95, 201, 183);
+    overflow: hidden;
+    width: 300px;
+    height:0;
+    transition: .5s ease;
+}
+
+.container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family:verdana;
+
+}
+.navbar{
+    background-color: #333;
+}
+
+.navbar-top{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display:block;
+    top:0;
+    width: auto;
+
+}
+.navbar-top.navbar-left {
+    float:left;
+}
+
+.navbar-top.navbar-right {
+    float:right;
+}
+
+.navbar a{
+
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:verdana;
+    float:left;
+}
+.navbar div{
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:verdana;
+    float:left;
+
+}
+.navbar a:hover{
+    background-color:rgb(37, 37, 37) ;
+}
+.navbar div:hover{
+    background-color:rgb(37, 37, 37) ;
+}
+
+.navbar li{
+    float:left;
+}
+
+
+.navbar-bottom{
+    list-style-type: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    height: 30;
+}
+
+.upload{
+    background-color: #eee;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.upload-assets{
+    font-family:verdana;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+.messages{
+    display:block;
+    color: white;
+}
+
+.errors{
+    background-color: red;
+}
+
+.success{
+    background-color: green;
+
+}
+
+.meio{
+    position: relative;
+    display: block;
+}
+
+.profile_sidebar{
+    display: block;
+    list-style-type: none;
+}
+
+.changepwd{
+    display: inline;
+}
+
+.vertical-menu {
+    margin-left: 32%;
+    width: 33%;
+    height: 60%;
+    border: 3px solid #333;
+    padding: 20px;
+    height: auto;
+}
+
+.vertical-menu a {
+    /*  background-color: #eee;
+    */color: black; 
+    display: block; 
+    padding: 12px; 
+    text-decoration: none; 
+    font-family:verdana;
+    text-align: justify;
+    width: 35%;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+    width: 35%;
+}
+
+.vertical-menu a.active {
+    background-color: #333;
+    color: white;
+    width: 35%;
+    text-align: justify;
+
+}
+.vertical-menu a.delete{
+    background-color: #333;
+    color: white;
+    width: 35%;
+
+}
+.vertical-menu a.delete:hover {
+    background-color: rgb(238, 96, 96);
+    color: white;
+}
+input[type="text"] {
+    padding: 12px 0.1px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  input[type="password"] {
+    padding: 12px 0.5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  input[type="date"] {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  select{
+    padding: 12px 55px;
+    border: 1px solid #ccc;
+    font-family: verdana;
+    font-size:80%;
+  }
+  input[type="file"] {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 15px 0.5px;
+    font-size: 16px;
+    font-family: Verdana;
+    margin-top:15px;
+    padding: 6px 20px;
+    text-align: right;
+  }
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+  textarea{
+    border: none;
+    color: black;
+    height: 10%;
+    padding: 10px 10px #333;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: white;
+    font-family: Verdana;
+    width: 70%;
+  }
+.category{
+    margin-top:auto;
+    margin-bottom: auto;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.register{
+    margin: auto;
+    width: 33%;
+    height: auto;
+    padding: 20px;
+    overflow:auto;
+    display:block;
+
+    border: 3px solid #333;
+
+}
+.login{
+    margin: auto;
+    width: 33%;
+    height: auto;
+    border: 3px solid #333;
+    padding: 20px;
+}
+.register-assets{
+    font-family: verdana;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 23px;
+}
+.upload{
+    width: auto;
+    margin-left:20%;
+    margin-right:20%;
+    height: auto;
+    padding: 20px;
+    overflow:auto;
+    display:block;
+}
+.upload-assets{    
+    font-family: verdana;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+    width: auto;
+}
+
+.btn{
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+   background-color: rgb(24, 23, 23);  
+    font-family: Verdana;
+    margin-top: 20px;
+    float:right;
+}
+.login-btn{
+    padding: 15px 100px;
+    background-color: #333;
+    margin: auto;
+    border: none;
+    color: white;
+    padding: 15px 60px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #333;
+    font-family: Verdana;
+    margin-top: 20px;
+    margin-left: 35%;
+    margin-left: 35%;
+
+}.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.column {
+    width: 40%;
+}
+
+.column.right {
+    width: 40%;
+    max-width: 50%;
+    padding: 50px;
+    float: right;
+    border-style: solid;
+}
+.description {
+    text-overflow: ellipsis; 
+    overflow: hidden;
+    white-space: nowrap; 
+}
+
+.column.left{
+    float: left;
+    width: 10em;
+    position: fixed;
+    z-index: 1;
+    height: 10em;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+.row {
+    padding: 5px;
+    border-style: solid;
+}
+.image-product {
+ background-color: #333;
+}
+
+.left-column {
+   /* top: 2%;
+    margin-left:5%;
+    margin-right:1%;
+    position: relative;*/
+    height:50%;
+    width:42%;
+    float:left;
+    overflow:hidden;
+    margin-top:5%;
+    margin-left:1%;
+
+}
+
+.right-column {
+    /*
+    width: auto;
+    margin-left:5%;
+    margin-right:1%;
+    margin-top:5%;
+    float: right;
+    width: 45%;
+    margin-top: 60px;*/
+    height:auto;
+    width:42%;
+    float:right;
+    overflow:hidden;
+    margin-top:5%;
+    margin-right:5%;
+
+}
+.commentWrap{
+    width: 90%;
+    height: auto;
+    overflow:hidden;
+
+    margin-right:10%;
+    margin-left:5%;
+ /*   position: relative;
+    margin-top: 550px;
+    display: block;
+    margin-bottom: 100px;
+*/
+}
+.left-column img {
+   /* width:87%;/* 198px;*/
+ /*   height:85%; /*148px;*/
+    height:60%;
+    width:auto;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 35px;
+    margin-top:5px;
+    left: 1%;
+    top: 25%;
+    border: 5px solid #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product-description {
+    border-bottom: 1px solid rgb(105, 105, 105);
+    margin-bottom: 10px;
+}
+.product-description span {
+    font-size: 13px;
+    color: #1abc9c;
+    font-family: verdana;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.product-description h1 {
+    font-weight: 300;
+    font-size: 52px;
+    color: #43484D;
+    letter-spacing: -2px;
+}
+
+.product-description p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 24px;
+    font-family: verdana;
+
+}
+
+.comments{
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 2%;
+    font-family: verdana;
+    font-size: 15px;
+    text-align: justify;
+}
+.comments_user{
+    font-family: verdana;
+    color: #999898;
+    font-size: 13px;
+
+}
+.form {
+    height: auto;
+    font-family: verdana;
+}
+#loginReminder{
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; 
+    background-color: rgb(24, 23, 23);  
+}
+.btn-comment-not-logged{
+    font-family: verdana;
+    float:left;
+    margin-bottom: 2%;
+}
+.new_comment{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.downloadBtn{
+    background-color: #1abc9c;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    float:right;
+}
