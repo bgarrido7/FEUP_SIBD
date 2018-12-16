@@ -22,25 +22,24 @@ if (isset($save)) {
 <section id="content">
     <h2>Login</h2>
     <div class="login">
-        <img class="image-logo" src="images/logoFinal.PNG"   alt="logo_image" >
+       <img class="image-logo" src="images/logoFinal.PNG"   alt="logo_image" >
        <form method="post">
        <div class="register-assets">
 
            <label> Username:
                 <input type="text" name="username" value="">
-            </label></div>
+            </label>
+        </div>
         <div class="register-assets">
 
            <label> Password:
                 <input type="password" name="password">
-            </label></div>
-           <label>
-                <input type="submit" value="Login" name="save" class="login-btn btn-success">
-        </label></div>
+            </label>
+        </div>
+        <label>
+            <input type="submit" value="Login" name="save" class="login-btn btn-success">
+        </label>
         </form>
     </div>
 
 </section>
-
-</body>
-</html>
