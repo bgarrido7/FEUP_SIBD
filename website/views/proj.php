@@ -34,6 +34,9 @@ if (isset($_POST['submit']) && strlen(($_POST['comment'])) > 1) {
     <form class="form" method="post">
        Stars:   <?= $stars['count'] ?><input type="image" src="./images/star.png" alt="stared" name="stared"> 
     </form>
+    <a href="<?= $display_project['stl_path'] ?>" download>
+        <button class="downloadBtn"> Download</button>
+    </a>
 </div>
 
 <div class="commentWrap">

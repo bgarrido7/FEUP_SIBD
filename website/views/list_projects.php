@@ -5,28 +5,24 @@
 
 <?php if (isset($projects[0])) { ?>
 
-    <div class="column right">
+    <div class="column">
         <?php foreach ($projects as $project) { ?>
             <div class="row">
                 <h1><?= $project['name'] ?></h1>
                 <a class="image" href="view_proj.php?proj_id=<?= $project['projectid'] ?>">
-                    <img class="image" src="<?= $project['image_path'] ?>" alt="<?= $project['name'] ?>" >
+                    <img class="image projects" src="<?= $project['image_path'] ?>" alt="<?= $project['name'] ?>" >
                 </a>
+                <h3>Description</h3>
+                <?php $stars = countStars($project['projectid']); ?>
+                <input type="image" src="./images/star.png" alt="stared" name="stared"> :  <?= $stars['count'] ?>
                 <p class="description"><?= $project['description'] ?></p>
 
             </div>
         <?php } ?>
     </div>
 
-    <div class="column left">
-        <div class="">
-            filter
-        </div>
-
-
-    </div>
 <?php } else { ?>
-    <div class="column right">
+    <div>
         No projects within this category
     </div>
 
