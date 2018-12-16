@@ -44,25 +44,27 @@ if (isset($submit)) {
 
 
 <h2>Upload STL</h2>
-
+<div class="upload">
 <form action="upload.php" method="post" enctype="multipart/form-data">
+<div class="upload-assets">
     Name:
-    <input type="text" name="name">
-    Select stl to upload (100MB max):
-    <input type="file" name="upfile" id="upfile">
-    Select an image for your STL:
-    <input type="file" name="image" id="upfile">
-    Description:
-    <textarea name="description" dirname="description.dir"></textarea>
-
+    <input type="text" name="name"></div>
+    <div class="upload-assets"> Select stl to upload (100MB max):
+    <input type="file" name="upfile" id="upfile"></div>
+    <div class="upload-assets"> Select an image for your STL:
+    <input type="file" name="image" id="upfile"></div>
+    <div class="upload-assets"> Description:
+    <textarea name="description" dirname="description.dir"></textarea></div>
+    <div class="upload-assets">Category: 
     <select name="category_selected">
 <?php foreach ($categories as $category) { ?>
             <option value="<?= $category['name'] ?>"><?= $category['name'] ?></option>
 <?php } ?>
 
-
+</div>
     </select>
-
-    <input type="submit" value="Upload" name="submit">
+    <div class="upload-assets">
+    <input type="submit" value="Upload" name="submit" class="btn"></div>
+</div>    
 </form>
 
