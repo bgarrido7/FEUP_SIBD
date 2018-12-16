@@ -50,7 +50,7 @@ if (isset($submit)) {
         Name:
         <input type="text" name="name">
     </div>
-    <div class="upload-assets"> ~
+    <div class="upload-assets"> 
         Select stl to upload (100MB max):
         <input type="file" name="upfile" id="upfile">
     </div>
