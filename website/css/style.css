@@ -451,15 +451,16 @@ input[type="text"] {
 */
 }
 .left-column img {
-    height:60%;
+    height:auto;
     width:auto;
-    max-width: 90%;
+    max-width: 95%;
     display: block;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: auto;
+    margin-right: auto;
     margin-bottom: 35px;
     margin-top:5px;
-    left: 1%;
-    top: 25%;
     border: 5px solid #f1f1f1;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
