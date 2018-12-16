@@ -438,6 +438,7 @@ input[type="text"] {
     overflow:hidden;
     margin-right:10%;
     margin-left:5%;
+    font-family: verdana;
 }
 .left-column img {
     height:auto;
