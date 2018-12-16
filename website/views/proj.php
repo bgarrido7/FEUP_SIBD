@@ -12,11 +12,11 @@ if (isset($_POST['submit']) && strlen(($_POST['comment'])) > 1) {
 
 
 ?>
-
+<!--
 <h2>
     <?= $display_project['name'] ?>
 </h2>
-
+-->
 
 <div class="left-column">
     <img class="image" src="<?= $display_project['image_path'] ?>" alt="<?= $display_project['name'] ?>">
@@ -51,7 +51,7 @@ if (isset($_POST['submit']) && strlen(($_POST['comment'])) > 1) {
     <?php if (isset($_SESSION['username'])) { ?>
         <form class="form" method="post">
             <input type="text" name="comment" class="new_comment" placeholder="New comment...">
-            <input type="submit" value="comment" name="submit" class="login-btn btn-success">
+            <input type="submit" value="comment" name="submit" class="btn btn-success">
         </form>
     <?php } else { ?>
         <a href="login.php" id="loginReminder">
