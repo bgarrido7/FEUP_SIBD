@@ -16,12 +16,28 @@ function getProjectsFromCategory($cat_name) {
     return $stmt->fetchAll();
 }
 
-function getProjectFromId($proj_id){
-     global $conn;
+function getProjectFromId($proj_id) {
+    global $conn;
 
     $stmt = $conn->prepare('SELECT * FROM projects WHERE projectid = ?');
     $stmt->execute(array($proj_id));
     return $stmt->fetch();
-    
 }
+
+function getCommentsFromId($proj_id) {
+    global $conn;
+
+    $stmt = $conn->prepare('SELECT * FROM comments WHERE projects = ?');
+    $stmt->execute(array($proj_id));
+    return $stmt->fetchAll();
+}
+
+function addComment($user,$proj_id, $comment) {
+    global $conn;
+
+    $stmt = $conn->prepare('INSERT INTO comments VALUES (?, ?, ?)');
+    $stmt->execute(array($user, $proj_id, $comment));
+    return 1;
+}
+
 ?>

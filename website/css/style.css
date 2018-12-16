@@ -115,12 +115,12 @@ h1{
     background-color:rgb(37, 37, 37) ;
 }
 
-li{
+.navbar li{
     float:left;
 }
 
 
-.navbar.navbar-bottom{
+.navbar-bottom{
     list-style-type: none;
     position: fixed;
     right: 0;
@@ -128,7 +128,6 @@ li{
     left: 0;
     padding: 0;
     height: 30;
-
 }
 
 .upload{
@@ -293,7 +292,7 @@ select{
     font-family: Verdana;
 }
 .login-btn{
-     border: none;
+    border: none;
     color: white;
     padding: 15px 30px;
     text-align: center;
@@ -303,7 +302,7 @@ select{
     margin-top: 20px;
     float: right;
     font-family: Verdana;
-    
+
 
 
 }.dropdown-content {
@@ -380,16 +379,16 @@ select{
     margin-top: 60px;
     margin-bottom: 60px;
 
-  
+
 }
 
 .left-column img {
-    width: 55%;
+    width: 45%;
     height: auto;
     position: absolute;
     left: 0;
     top: 0;
-    
+
 
 }
 
@@ -423,3 +422,36 @@ select{
     color: #86939E;
     line-height: 24px;
 }
+
+.commentWrap{
+    width: 100%;
+    margin-bottom: 100px;
+
+}
+.comments{
+    display: block;
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 550px;
+    margin-bottom: 10px;
+}
+#loginReminder{
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;   
+}
+
+.new_comment{
+    margin-top: 20px;
+    width: 100%;
+}
+

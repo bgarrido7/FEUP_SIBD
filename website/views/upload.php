@@ -26,20 +26,13 @@ if (isset($submit)) {
         $ext = substr($_FILES['upfile']['name'], -3);
         if ($_FILES['upfile']['size'] > 100000000) {
             $_SESSION['error_message'] = 'Exceeded filesize limit';
-        } 
-        
-        elseif ($ext != 'stl') {
+        } elseif ($ext != 'stl') {
             $_SESSION['error_message'] = 'Invalid file type';
-        } 
-        
-        elseif (!move_uploaded_file($_FILES['upfile']['tmp_name'], sprintf('./stls/%s_%s', $_SESSION['username'], $_FILES['upfile']['name'])) || !move_uploaded_file($_FILES['image']['tmp_name'], sprintf('./images/%s_%s', $_SESSION['username'], $_FILES['image']['name']))) {
+        } elseif (!move_uploaded_file($_FILES['upfile']['tmp_name'], sprintf('./stls/%s_%s', $_SESSION['username'], $_FILES['upfile']['name'])) || !move_uploaded_file($_FILES['image']['tmp_name'], sprintf('./images/%s_%s', $_SESSION['username'], $_FILES['image']['name']))) {
             $_SESSION['error_message'] = 'Upload unsuccessful! -> moveuploaded files';
-        } 
-        
-        elseif(createProject($_SESSION['username'], $name, $description, sprintf('./images/%s_%s', $_SESSION['username'], $_FILES['image']['name']), sprintf('./stls/%s_%s', $_SESSION['username'], $_FILES['upfile']['name']), $category_selected)){
+        } elseif (createProject($_SESSION['username'], $name, $description, sprintf('./images/%s_%s', $_SESSION['username'], $_FILES['image']['name']), sprintf('./stls/%s_%s', $_SESSION['username'], $_FILES['upfile']['name']), $category_selected)) {
             $_SESSION['success_message'] = 'Upload successful!';
         }
-        
     } catch (RuntimeException $e) {
 
         $_SESSION['error_message'] = 'Upload unsuccessful!';
