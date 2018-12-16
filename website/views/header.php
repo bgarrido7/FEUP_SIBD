@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>STradeL</title>
-        <link rel="stylesheet" href="cssStyleAnother/style.css">
+        <link rel="stylesheet" href="css/style.css">
 
     </head>
     <body>
