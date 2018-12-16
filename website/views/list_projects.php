@@ -18,7 +18,7 @@
                 <?php } else { ?>
                     <input type="image" src="./images/star_empty.png" alt="stared" name="stared"> :  <?= $stars['count'] ?>
                 <?php } ?>
-                <h3>Description</h3>
+                <h3>Description:</h3>
                 <p class="description"><?= $project['description'] ?></p>
 
             </div>
