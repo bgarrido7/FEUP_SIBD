@@ -13,7 +13,6 @@
                     <li><a href="search.php"> Search</a></li>
                     <li><div class="dropdown">
                             <button class="dropbtn">Categories
-                                <i class="fa fa-caret-down"></i>
                             </button>
                             <div class="dropdown-content">
                                 <?php
