@@ -1,3 +1,4 @@
+<body class="home">
 <h1>Highlights</h1>
 
     <div class="container">
@@ -19,5 +20,5 @@
         </div>
     </div>
 
- 
+ </body>
     
