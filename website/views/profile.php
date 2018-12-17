@@ -46,9 +46,20 @@ if (isset($password_submit)) {
         <a class="delete" href="#">Delete Account</a>
     </div>
 
+    <div class="info-menu"  id="allinfo">
+
+    <img class="info-img" src="images/person.jpg" >
+
+                <p>Name:</p>
+                <p>City:</p>
+                <p>Birthday:</p>
+             
+    </div>
+
     <div class="vertical-menu-right" id="edit-picture">
         <form method="post"> 
             <div class="update-assets">
+            <input type="file" name="upfile" id="upfile" class="update-pic">
                 <label>  
                     Upload a new Picture:
                     <input  style="width: 100%;" type="file" name="upfile" id="upfile">
@@ -135,7 +146,10 @@ if (isset($password_submit)) {
         var city = document.getElementById("edit-city");
         var birth = document.getElementById("edit-birth");
         var pass = document.getElementById("security");
-        if (pass.style.display === "block") {
+        var info = document.getElementById("allinfo");
+        
+        info.style.display = "none";
+        if (pass.style.display === "block"){
             pass.style.display = "none";
         }
         if (city.style.display === "block") {
@@ -151,7 +165,10 @@ if (isset($password_submit)) {
         var city = document.getElementById("edit-city");
         var birth = document.getElementById("edit-birth");
         var pass = document.getElementById("security");
-        if (pic.style.display === "block") {
+        var info = document.getElementById("allinfo");
+        
+        info.style.display = "none";
+        if (pic.style.display === "block"){
             pic.style.display = "none";
         }
         if (pass.style.display === "block") {
@@ -167,7 +184,10 @@ if (isset($password_submit)) {
         var city = document.getElementById("edit-city");
         var birth = document.getElementById("edit-birth");
         var pass = document.getElementById("security");
-        if (pic.style.display === "block") {
+        var info = document.getElementById("allinfo");
+        
+        info.style.display = "none";
+        if (pic.style.display === "block"){
             pic.style.display = "none";
         }
         if (city.style.display === "block") {
@@ -183,7 +203,10 @@ if (isset($password_submit)) {
         var city = document.getElementById("edit-city");
         var birth = document.getElementById("edit-birth");
         var pass = document.getElementById("security");
-        if (pic.style.display === "block") {
+        var info = document.getElementById("allinfo");
+        
+        info.style.display = "none";
+        if (pic.style.display === "block"){
             pic.style.display = "none";
         }
         if (city.style.display === "block") {
