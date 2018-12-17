@@ -14,12 +14,22 @@
         <a class="delete" href="#">Delete Account</a>
     </div>
 
+    <div class="vertical-menu-right"  id="allinfo">
+
+                <p>Profile Pic:</p>
+                <p>Name:</p>
+                <p>City:</p>
+                <p>Birthday:</p>
+             
+    </div>
+
     <div class="vertical-menu-right" id="edit-picture">
         <form>
             <div class="update-assets">
+            <input type="file" name="upfile" id="upfile" class="update-pic">
                 <label>  
-                    Upload a new Picture:
-                    <input type="file" name="upfile" id="upfile">
+                    Upload a new Picture
+                    
                 </label>
                 <input type="submit" value="Update Account" name="submit" class="btn-update">
             </div>
@@ -100,6 +110,9 @@
         var city = document.getElementById("edit-city");
         var birth = document.getElementById("edit-birth");
         var pass = document.getElementById("security");
+        var info = document.getElementById("allinfo");
+        
+        info.style.display = "none";
         if (pass.style.display === "block"){
             pass.style.display = "none";
         }
@@ -116,6 +129,9 @@
         var city = document.getElementById("edit-city");
         var birth = document.getElementById("edit-birth");
         var pass = document.getElementById("security");
+        var info = document.getElementById("allinfo");
+        
+        info.style.display = "none";
         if (pic.style.display === "block"){
             pic.style.display = "none";
         }
@@ -132,6 +148,9 @@
         var city = document.getElementById("edit-city");
         var birth = document.getElementById("edit-birth");
         var pass = document.getElementById("security");
+        var info = document.getElementById("allinfo");
+        
+        info.style.display = "none";
         if (pic.style.display === "block"){
             pic.style.display = "none";
         }
@@ -148,6 +167,9 @@
         var city = document.getElementById("edit-city");
         var birth = document.getElementById("edit-birth");
         var pass = document.getElementById("security");
+        var info = document.getElementById("allinfo");
+        
+        info.style.display = "none";
         if (pic.style.display === "block"){
             pic.style.display = "none";
         }
