@@ -131,6 +131,41 @@ h1{
     float:left;
 }
 
+#searchA{
+
+    max-height: 100%;
+}
+.search{
+    float: left;
+    display: block;
+    max-height: 5px;
+    width: 250px;
+}
+.search.input{
+    float: left;
+    width: 80%;
+    padding-top: 5px;
+    padding-bottom: 1px;
+}
+
+.btnSearch{
+    float:right;
+    border: none;
+    color: white;
+    background-color: #333;
+    font-family: Verdana;
+    float:right;
+}
+.btnSearch:hover{
+
+   background-color:rgb(37, 37, 37) ;
+ 
+}
+
+.navbar li a input[type=text] {
+    max-height: 100%;
+}
+
 
 .navbar-bottom{
     list-style-type: none;

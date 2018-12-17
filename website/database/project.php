@@ -68,13 +68,20 @@ function isAlreadyStared($user, $proj_id) {
     return 0;
 }
 
-
 function countStars($proj_id) {
     global $conn;
 
     $stmt = $conn->prepare('SELECT COUNT (DISTINCT users) FROM stared WHERE projects = ? ');
     $stmt->execute(array($proj_id));
     return $stmt->fetch();
+}
+
+function searchProject($text) {
+    global $conn;
+
+    $stmt = $conn->prepare('SELECT * FROM projects WHERE name LIKE ? ');
+    $stmt->execute(array('%'.$text.'%'));
+    return $stmt->fetchAll();
 }
 
 ?>
