@@ -13,7 +13,7 @@
                     <img class="image projects" src="<?= $project['image_path'] ?>" alt="<?= $project['name'] ?>" >
                 </a>
                 <?php $stars = countStars($project['projectid']); ?>
-                <?php if (!isAlreadyStared($_SESSION['username'], $project['projectid'])) { ?>
+                <?php if (isset($_SESSION['username']) && !isAlreadyStared($_SESSION['username'], $project['projectid'])) { ?>
                     <input type="image" src="./images/star_full.png" alt="stared" name="stared"> :  <?= $stars['count'] ?>
                 <?php } else { ?>
                     <input type="image" src="./images/star_empty.png" alt="stared" name="stared"> :  <?= $stars['count'] ?>
@@ -22,7 +22,7 @@
                 <p class="description"><?= $project['description'] ?></p>
 
             </div>
-        <?php } ?>
+        <?php }?>
     </div>
     <div style="height: 100px;"> 
     </div>

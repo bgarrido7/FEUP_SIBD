@@ -80,7 +80,15 @@ function searchProject($text) {
     global $conn;
 
     $stmt = $conn->prepare('SELECT * FROM projects WHERE name LIKE ? ');
-    $stmt->execute(array('%'.$text.'%'));
+    $stmt->execute(array('%' . $text . '%'));
+    return $stmt->fetchAll();
+}
+
+function getProjectsMostStared() {
+    global $conn;
+
+    $stmt = $conn->prepare('SELECT projects,count(*) FROM stared GROUP BY projects ORDER BY count(*) DESC');
+    $stmt->execute();
     return $stmt->fetchAll();
 }
 
