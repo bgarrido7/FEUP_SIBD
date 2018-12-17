@@ -1,4 +1,7 @@
 <body class="home">
+
+<img class="image-home" src="images/xmas.jpg" alt="xmas_image" />
+
 <h1>Highlights</h1>
 
     <div class="container">
