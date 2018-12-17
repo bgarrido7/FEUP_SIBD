@@ -1,3 +1,35 @@
+<?php
+extract($_POST);
+if (isset($city_submit)) {
+    changeCity($city, $user['username']);
+    $_SESSION['success_message'] = 'City Updated!';
+    header("Refresh:0");
+}
+
+if (isset($birthday_submit)) {
+    changeBirthday($birthday, $user['username']);
+    $_SESSION['success_message'] = 'Birthday Updated!';
+    header("Refresh:0");
+}
+
+if (isset($password_submit)) {
+    if (isValidUser($user['username'], $password_old)) {
+        if ($password_new1 == $password_new2) {
+            changePassword($password_new1, $user['username']);
+            $_SESSION['success_message'] = 'Password Updated!';
+            header("Refresh:0");
+            
+        } else {
+            $_SESSION['error_message'] = 'Passwords do not match!';
+            header("Refresh:0");
+        }
+    } else {
+        $_SESSION['error_message'] = 'Old Password incorrect!';
+        header("Refresh:0");
+    }
+}
+?>
+
 <h2>User Area</h2>
 
 <div class="edit-menu">
@@ -15,21 +47,22 @@
     </div>
 
     <div class="vertical-menu-right" id="edit-picture">
-        <form>
+        <form method="post"> 
             <div class="update-assets">
                 <label>  
                     Upload a new Picture:
-                    <input type="file" name="upfile" id="upfile">
+                    <input  style="width: 100%;" type="file" name="upfile" id="upfile">
                 </label>
-                <input type="submit" value="Update Account" name="submit" class="btn-update">
+                <input type="submit" value="Update Account" name="picture_submit" class="btn-update">
             </div>
         </form>
     </div>
 
 
     <div class="vertical-menu-right" id="edit-city">  
-        <form> 
+        <form method="post"> 
             <div class="update-assets">
+                <p>City: <?= $user['city'] ?></p>
                 <label>
                     Change City:
                     <select name="city">
@@ -53,41 +86,43 @@
                         <option value="Viseu">Viseu</option> 
                     </select>
                 </label>
-                <input type="submit" value="Update Account" name="submit" class="btn-update">
+                <input type="submit" value="Update Account" name="city_submit" class="btn-update">
             </div>
         </form>
     </div>
-    
+
     <div class="vertical-menu-right" id="edit-birth">
-        <form>
+        <form method="post"> 
             <div class="update-assets">
+
+                <p>Birthday: <?= $user['birthday'] ?></p>
                 <label>Change Birthday:
                     <input type="date" name="birthday">
                 </label>
-                <input type="submit" value="Update Account" name="submit" class="btn-update">
+                <input type="submit" value="Update Account" name="birthday_submit" class="btn-update">
             </div>
         </form>
     </div>
 
     <div  class="vertical-menu-right" id="security">
-        <form>
+        <form method="post"> 
             <div class="update-assets">
                 <label>Current Password:
-                    <input type="password" name="password">
+                    <input type="password" name="password_old">
                 </label>
             </div>
             <div class="update-assets">
                 <label>New Password:
-                    <input type="password" name="password">
+                    <input type="password" name="password_new1">
                 </label>
             </div>
             <div class="update-assets">
                 <label>Repeat New Password:
-                    <input type="password" name="password">
+                    <input type="password" name="password_new2">
                 </label>
             </div>
-                <input type="submit" value="Update Account" name="submit" class="btn-update">
-            
+            <input type="submit" value="Update Account" name="password_submit" class="btn-update">
+
         </form>
     </div>
 
@@ -100,13 +135,13 @@
         var city = document.getElementById("edit-city");
         var birth = document.getElementById("edit-birth");
         var pass = document.getElementById("security");
-        if (pass.style.display === "block"){
+        if (pass.style.display === "block") {
             pass.style.display = "none";
         }
-        if (city.style.display === "block"){
+        if (city.style.display === "block") {
             city.style.display = "none";
         }
-        if (birth.style.display === "block"){
+        if (birth.style.display === "block") {
             birth.style.display = "none";
         }
         pic.style.display = "block";
@@ -116,13 +151,13 @@
         var city = document.getElementById("edit-city");
         var birth = document.getElementById("edit-birth");
         var pass = document.getElementById("security");
-        if (pic.style.display === "block"){
+        if (pic.style.display === "block") {
             pic.style.display = "none";
         }
-        if (pass.style.display === "block"){
+        if (pass.style.display === "block") {
             pass.style.display = "none";
         }
-        if (birth.style.display === "block"){
+        if (birth.style.display === "block") {
             birth.style.display = "none";
         }
         city.style.display = "block";
@@ -132,13 +167,13 @@
         var city = document.getElementById("edit-city");
         var birth = document.getElementById("edit-birth");
         var pass = document.getElementById("security");
-        if (pic.style.display === "block"){
+        if (pic.style.display === "block") {
             pic.style.display = "none";
         }
-        if (city.style.display === "block"){
+        if (city.style.display === "block") {
             city.style.display = "none";
         }
-        if (pass.style.display === "block"){
+        if (pass.style.display === "block") {
             pass.style.display = "none";
         }
         birth.style.display = "block";
@@ -148,13 +183,13 @@
         var city = document.getElementById("edit-city");
         var birth = document.getElementById("edit-birth");
         var pass = document.getElementById("security");
-        if (pic.style.display === "block"){
+        if (pic.style.display === "block") {
             pic.style.display = "none";
         }
-        if (city.style.display === "block"){
+        if (city.style.display === "block") {
             city.style.display = "none";
         }
-        if (birth.style.display === "block"){
+        if (birth.style.display === "block") {
             birth.style.display = "none";
         }
         pass.style.display = "block";
