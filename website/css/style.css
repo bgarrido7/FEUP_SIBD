@@ -112,17 +112,17 @@ h1{
 }
 
 .image {
-    width:300; 
-    height: 200;
+    width:300px; 
+    height: 200px;
 }
 .image-logo{
-    width:fill; 
-    height:auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 35px;
-    margin-top:10px;
+    width:90%; 
+     height:20%;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 35px;
+     margin-top:10px;
 }
 .overlay {
     position: absolute;
@@ -235,6 +235,8 @@ h1{
     background-color:rgb(37, 37, 37) ;
 
 }
+
+
 
 .navbar li a input[type=text] {
     max-height: 100%;
@@ -717,7 +719,13 @@ textarea{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer; 
-    background-color: rgb(24, 23, 23);  
+    background-color: #333;
+    color: white;
+    background-color: #333;
+    font-family: Verdana;
+    top:10;
+    left:5;
+
 }
 .btn-comment-not-logged{
     font-family: verdana;

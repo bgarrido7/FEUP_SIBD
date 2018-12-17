@@ -13,7 +13,7 @@ if (isset($_SESSION['username']))
 
 else {
     ?>
-    <a href = "login.php" id = "loginReminder">
+    <a class="login-to" href = "login.php" id = "loginReminder">
         Login to proceeded
     </a>
     <?php
