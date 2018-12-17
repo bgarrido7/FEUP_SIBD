@@ -92,14 +92,23 @@ h1{
     margin-left:10px ;
     margin-right:10px ;
 }
+.no-results{
+    color:rgb(97, 95, 95);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    margin-left:3%;
+    margin-top:3%;
+    font-size: 20px;
+    margin-right:3%;
+    font-style: italic;
+}
 .homescreen{
     background-image: url("images/background.jpg");
 }
 .container {
     position: relative;
     display: inline-block;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-left: 3%;
 }
 
 .image {
@@ -107,8 +116,8 @@ h1{
     height: 200;
 }
 .image-logo{
-    width:90%; 
-    height:20%;
+    width:fill; 
+    height:auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -251,8 +260,8 @@ h1{
 }
 .upload-assets{
     font-family:verdana;
-    margin-bottom: 30px;
-    text-align: justify;
+     margin-bottom: 30px;
+     text-align: justify;
 }
 .messages{
     display:block;

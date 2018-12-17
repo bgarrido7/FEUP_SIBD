@@ -28,7 +28,7 @@
     </div>
 
 <?php } else { ?>
-    <div>
+    <div class="no-results">
         No projects within this category
     </div>
 
