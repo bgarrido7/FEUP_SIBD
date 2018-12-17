@@ -12,7 +12,7 @@
         ?>
         <div class="container">
             <a class="image" href="view_proj.php?proj_id=<?= $project['projectid'] ?>">
-                <img class="image projects" src="<?= $project['image_path'] ?>" alt="<?= $project['name'] ?>" >
+                <img class="image" src="<?= $project['image_path'] ?>" alt="<?= $project['name'] ?>" >
             </a>
             <a class="image" href="view_proj.php?proj_id=<?= $project['projectid'] ?>">
                 <div class="overlay">
