@@ -51,7 +51,7 @@ if (isset($submit)) {
             <input type="text" name="name">
         </div>
         <div class="upload-assets"> 
-            <label class="input-file" for="input-file">Select stl to upload (100MB max):</label>
+            <label class="input-file" for="input-file">Select stl to upload (100MB max)</label>
             <input style="display: none;" id="input-file" type="file" name="upfile" id="upfile">
             <span id='file-name'></span>
             <script>
@@ -65,13 +65,13 @@ if (isset($submit)) {
             
         </div>
         <div class="upload-assets"> 
-            <label class="input-file" for="input-file2">Select an image for your STL:</label>
+            <label class="input-file" for="input-file2">Select an image for your STL</label>
             <input style="display: none;" id="input-file2" type="file" name="image">
             <span id='file-name2'></span>
             <script>
                 var $input2 = document.getElementById('input-file2'),
                         $fileName2 = document.getElementById('file-name2');
-
+       
                 $input2.addEventListener('change', function () {
                     $fileName2.textContent = this.value;
                 });
