@@ -277,7 +277,20 @@ display: none;
 #allinfo {
     display: block;
 }
+.info-img{
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    height:220;
+    widows: auto;
+}
+.info-menu{
+    margin-top:6%;
+    font-family: verdana;
+    size: 20px;
+    text-align: center;
+    font-weight: bold;
 
+}
 .btn-update{
     color: white;
     padding: 15px 10px;
