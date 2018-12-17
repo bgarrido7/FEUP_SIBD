@@ -1,7 +1,7 @@
 <?php ?>
-<h2>
-    Search: <?= $search ?>
-</h2>
+<h4>
+&nbsp &nbsp Search for: "<?= $search ?>"
+</h4>
 
 <?php if (isset($projects[0])) { ?>
 
