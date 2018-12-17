@@ -16,7 +16,8 @@
 
     <div class="info-menu"  id="allinfo">
 
-                <p>Profile Pic:</p>
+    <img class="info-img" src="images/person.jpg" >
+
                 <p>Name:</p>
                 <p>City:</p>
                 <p>Birthday:</p>
