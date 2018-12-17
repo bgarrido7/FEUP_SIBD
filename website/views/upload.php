@@ -45,34 +45,54 @@ if (isset($submit)) {
 
 <h2>Upload STL</h2>
 <div class="upload">
-<form action="upload.php" method="post" enctype="multipart/form-data">
-    <div class="upload-assets">
-        Name:
-        <input type="text" name="name">
-    </div>
-    <div class="upload-assets"> 
-        Select stl to upload (100MB max):
-        <input type="file" name="upfile" id="upfile">
-    </div>
-    <div class="upload-assets"> 
-        Select an image for your STL:
-        <input type="file" name="image" id="upfile">
-    </div>
-    <div class="upload-assets"> 
-        Description:
-        <textarea name="description" dirname="description.dir"></textarea>
-    </div>
-    <div class="upload-assets">
-        Category: 
-        <select name="category_selected">
-        <?php foreach ($categories as $category) { ?>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <div class="upload-assets">
+            Name:
+            <input type="text" name="name">
+        </div>
+        <div class="upload-assets"> 
+            <label class="input-file" for="input-file">Select stl to upload (100MB max):</label>
+            <input style="display: none;" id="input-file" type="file" name="upfile" id="upfile">
+            <span id='file-name'></span>
+            <script>
+                var $input = document.getElementById('input-file'),
+                        $fileName = document.getElementById('file-name');
+
+                $input.addEventListener('change', function () {
+                    $fileName.textContent = this.value;
+                });
+            </script>
+            
+        </div>
+        <div class="upload-assets"> 
+            <label class="input-file" for="input-file2">Select an image for your STL:</label>
+            <input style="display: none;" id="input-file2" type="file" name="image">
+            <span id='file-name2'></span>
+            <script>
+                var $input2 = document.getElementById('input-file2'),
+                        $fileName2 = document.getElementById('file-name2');
+
+                $input2.addEventListener('change', function () {
+                    $fileName2.textContent = this.value;
+                });
+            </script>
+             
+        </div>
+        <div class="upload-assets"> 
+            Description:
+            <textarea name="description" dirname="description.dir"></textarea>
+        </div>
+        <div class="upload-assets">
+            Category: 
+            <select name="category_selected">
+                <?php foreach ($categories as $category) { ?>
                     <option value="<?= $category['name'] ?>"><?= $category['name'] ?></option>
-        <?php } ?>
-        </select>
-    </div>
-    <div class="upload-assets">
-        <input type="submit" value="Upload" name="submit" class="btn">
-    </div>
+                <?php } ?>
+            </select>
+        </div>
+        <div class="upload-assets">
+            <input type="submit" value="Upload" name="submit" class="btn">
+        </div>
 </div>    
 </form>
 

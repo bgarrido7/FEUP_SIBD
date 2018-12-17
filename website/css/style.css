@@ -170,8 +170,8 @@ h1{
 }
 .btnSearch:hover{
 
-   background-color:rgb(37, 37, 37) ;
- 
+    background-color:rgb(37, 37, 37) ;
+
 }
 
 .navbar li a input[type=text] {
@@ -259,10 +259,10 @@ h1{
     height: auto;
 }
 #edit-picture {
-display: none;
+    display: none;
 }
 #edit-city {
-display: none;
+    display: none;
 }
 
 #edit-birth {
@@ -272,7 +272,7 @@ a.active:hover {
     cursor: pointer;
 }
 #security {
-display: none;
+    display: none;
 }
 #allinfo {
     display: block;
@@ -369,12 +369,12 @@ input[type="file"] {
 }
 
 .update-pic {
-	width: 20%;
-	height:20%;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
+    width: 20%;
+    height:20%;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
 }
 .update-pic + label {
     font-size: 25px;
@@ -674,4 +674,14 @@ textarea{
     cursor: pointer;
     font-size: 20px;
     float:right;
+}
+
+.input-file{
+
+    background-color: #3498db;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    padding: 6px 20px;
 }
