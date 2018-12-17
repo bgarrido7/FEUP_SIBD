@@ -1,4 +1,3 @@
-
 CREATE TABLE locations(
 	city VARCHAR PRIMARY KEY,
 	x NUMERIC(8,6) NOT NULL,
@@ -37,10 +36,6 @@ CREATE TABLE stared(
 	projects SERIAL REFERENCES projects(projectID) NOT NULL,
 );
 
-CREATE TABLE wishlist(
-	users VARCHAR REFERENCES users(username) NOT NULL,
-	projects SERIAL REFERENCES projects(projectID) NOT NULL
-);
 
 INSERT INTO locations (city,x,y) VALUES ('Aveiro',40.638174, -8.650185);
 INSERT INTO locations (city,x,y) VALUES ('Beja',38.040248, -7.819459);
