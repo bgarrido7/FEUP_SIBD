@@ -260,10 +260,8 @@ h1{
 }
 .upload-assets{
     font-family:verdana;
-    margin-bottom: 30px;
-    text-align: justify;
-    border: 5px solid rgb(37, 37, 37);
-
+     margin-bottom: 30px;
+     text-align: justify;
 }
 .messages{
     display:block;
@@ -748,9 +746,8 @@ textarea{
     cursor: pointer;
     margin: 10px;
     padding: 6px 20px;
-    border: 5px solid red;
+    border: 5px solid #333;
     border-bottom: 10%;
-    float:left;
 }
 
 .input-file:hover{
