@@ -143,7 +143,7 @@ h1{
     float:left;
 }
 
-#searchA{
+#EditBirthchA{
 
     max-height: 100%;
 }
@@ -207,11 +207,18 @@ h1{
 
 .errors{
     background-color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top:8px;
+    border-bottom: 1px solid red;
+    margin-bottom: 10px;
 }
 
 .success{
     background-color: green;
-
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top:8px;
+    border-bottom: 1px solid green;
+    margin-bottom: 10px;
 }
 
 .meio{
@@ -229,11 +236,13 @@ h1{
 }
 
 .edit-menu {
-    margin-left: 32%;
-    width: 33%;
+    margin:auto;
+    width: 40%;
     border: 3px solid #333;
     padding: 20px;
-    height: 55%;
+    height: auto;
+    overflow:hidden;
+    display:block;
 }
 .vertical-menu-right{
     float:right;
@@ -271,7 +280,7 @@ display: none;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    background-color: #1abc9c;
+    background-color: #17a78a;
     font-family: Verdana;
     float:right;
     margin-top:20%
@@ -342,12 +351,50 @@ input[type="file"] {
     text-align: right;
 }
 
-.custom-file-upload {
+
+input[type="file"].update-pic {
+    
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 15px 0.5px;
+    font-size: 16px;
+    font-family: Verdana;
+    margin-top:15px;
+    padding: 6px 20px;
+    text-align: right;
+}
+.update-pic::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .update-pic::before {
+    content: 'Select some file';
+    display: inline-block;
+    background: #333;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+  .update-pic:hover::before {
+    border-color: rgb(37, 37, 37) ;
+  }
+  .update-pic-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+.update-pic-upload {
     border: 1px solid #ccc;
     display: inline-block;
-    padding: 6px 12px;
+    padding: 10px 15px;
     cursor: pointer;
 }
+
+
 textarea{
     border: none;
     color: black;
