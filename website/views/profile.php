@@ -40,9 +40,6 @@ if (isset($password_submit)) {
         <a href="#" onclick="EditBirth()">Change Birthdate</a>
         <a class="active">Security</a>
         <a href="#" onclick="EditPass()">Change Password</a>
-        <a class="active">View Projects</a>
-        <a href="#">On Whishlist</a>
-        <a href="#">Uploaded Files</a>
         <a class="delete" href="#">Delete Account</a>
     </div>
 
