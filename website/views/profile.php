@@ -14,7 +14,7 @@
         <a class="delete" href="#">Delete Account</a>
     </div>
 
-    <div class="vertical-menu-right"  id="allinfo">
+    <div class="info-menu"  id="allinfo">
 
                 <p>Profile Pic:</p>
                 <p>Name:</p>
