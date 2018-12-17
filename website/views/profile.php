@@ -47,30 +47,32 @@ if (isset($password_submit)) {
 
     <img class="info-img" src="images/person.jpg" >
 
-                <p>Name:</p>
-                <p>City:</p>
-                <p>Birthday:</p>
+                <p>Name: <?= $user['username'] ?></p>
+                <p>City: <?= $user['city'] ?></p>
+                <p>Birthday: <?= $user['birthday'] ?></p>
              
     </div>
 
-    <div class="vertical-menu-right" id="edit-picture">
-        <form method="post"> 
-            <div class="update-assets">
-            <input type="file" name="upfile" id="upfile" class="update-pic">
-                <label>  
-                    Upload a new Picture:
-                    <input  style="width: 100%;" type="file" name="upfile" id="upfile">
-                </label>
-                <input type="submit" value="Update Account" name="picture_submit" class="btn-update">
-            </div>
-        </form>
+    <div class="upload-assets" id="edit-picture">
+    <label class="input-file" for="input-file">Upload new Picture</label>
+            <input style="display: none;" id="input-file" type="file" name="upfile" id="upfile">
+            <span id='file-name'></span>
+            <script>
+                var $input = document.getElementById('input-file'),
+                        $fileName = document.getElementById('file-name');
+
+                $input.addEventListener('change', function () {
+                    $fileName.textContent = this.value;
+                });
+            </script>
+                 <input type="submit" value="Update Account" name="city_submit" class="btn-update">
+           
     </div>
 
 
     <div class="vertical-menu-right" id="edit-city">  
         <form method="post"> 
             <div class="update-assets">
-                <p>City: <?= $user['city'] ?></p>
                 <label>
                     Change City:
                     <select name="city">
@@ -103,7 +105,6 @@ if (isset($password_submit)) {
         <form method="post"> 
             <div class="update-assets">
 
-                <p>Birthday: <?= $user['birthday'] ?></p>
                 <label>Change Birthday:
                     <input type="date" name="birthday">
                 </label>
