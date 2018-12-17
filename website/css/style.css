@@ -228,42 +228,81 @@ h1{
     display: inline;
 }
 
-.vertical-menu {
+.edit-menu {
     margin-left: 32%;
     width: 33%;
-    height: 60%;
     border: 3px solid #333;
     padding: 20px;
+    height: 55%;
+}
+.vertical-menu-right{
+    float:right;
+    width: 60%;
+    margin-top:10%;
+}
+.update-assets{
+    font-family: verdana;
+    margin-bottom: 10%;
+}
+.vertical-menu{
+    float:left;
+    width: 30%;
     height: auto;
 }
+#edit-picture {
+display: none;
+}
+#edit-city {
+display: none;
+}
 
+#edit-birth {
+    display: none;
+}
+a.active:hover {
+    cursor: pointer;
+}
+#security {
+display: none;
+}
+.btn-update{
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #1abc9c;
+    font-family: Verdana;
+    float:right;
+    margin-top:20%
+}
 .vertical-menu a {
-    /*  background-color: #eee;
-    */color: black; 
+    color: black; 
     display: block; 
     padding: 12px; 
     text-decoration: none; 
     font-family:verdana;
     text-align: justify;
-    width: 35%;
+    width: auto;
+    height: auto;
 }
 
 .vertical-menu a:hover {
     background-color: #ccc;
-    width: 35%;
+    width: auto;
 }
 
 .vertical-menu a.active {
     background-color: #333;
     color: white;
-    width: 35%;
+    width: auto;
     text-align: justify;
 
 }
 .vertical-menu a.delete{
     background-color: #333;
     color: white;
-    width: 35%;
+    width: auto;
 
 }
 .vertical-menu a.delete:hover {
@@ -432,6 +471,7 @@ textarea{
     height: 100%;
     text-align: center;
     font-family:verdana;
+    background-color: #fdfdfd;
 }
 
 .description {
