@@ -40,7 +40,7 @@ if (isset($password_submit)) {
         <a href="#" onclick="EditBirth()">Change Birthdate</a>
         <a class="active">Security</a>
         <a href="#" onclick="EditPass()">Change Password</a>
-        <a class="delete" href="#">Delete Account</a>
+     <!--   <a class="delete" href="#">Delete Account</a>-->
     </div>
 
     <div class="info-menu"  id="allinfo">
