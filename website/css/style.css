@@ -274,6 +274,10 @@ a.active:hover {
 #security {
 display: none;
 }
+#allinfo {
+    display: block;
+}
+
 .btn-update{
     color: white;
     padding: 15px 10px;
