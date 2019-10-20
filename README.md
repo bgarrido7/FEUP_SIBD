@@ -1,13 +1,15 @@
 # STradeL
 
-WebSite for SIBD course in MIEEC @ FEUP
+Final Project WebSite for the SIBD course in MIEEC @ FEUP
 
-*languages used:*
+Course information [here](https://web.fe.up.pt/~arestivo/page/courses/2018/sibd/)
 
--PHP
--HTML
--CSS
--SQL
+* Languages Used: *
+
+* PHP
+* HTML
+* CSS
+* SQL
 
 
 ## Colaborators
